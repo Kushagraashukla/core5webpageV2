@@ -99,25 +99,23 @@
       return g;
     });
 
-    // --- Phyllotaxis dot field echoing the logo's emblem (navy + gold dots, growing outward)
-    var spiralRoot = document.getElementById('emergeSpiral');
-    var N = window.innerWidth < 700 ? 110 : 160;
+    // --- The logo's own emblem: 203 dots measured from logo.png, as [x, y, r, gold] around the gold sphere (image px)
+    var EMBLEM = [10.6,48.2,3.0,1,-38.4,33.0,2.3,0,-8.8,53.8,4.5,1,-50.4,21.5,2.0,0,-47.0,29.1,2.8,0,-56.7,13.4,2.6,0,-25.0,54.8,5.7,1,-56.7,23.8,3.4,0,36.5,50.0,2.3,1,-62.1,4.9,3.0,0,27.8,55.9,3.1,1,43.4,45.1,1.7,1,17.1,61.7,4.3,1,-65.9,-4.9,3.8,0,-42.9,51.3,6.5,1,-65.5,17.6,3.6,0,2.0,67.9,5.6,1,60.4,31.7,1.8,1,55.6,40.0,2.0,1,50.4,49.8,2.5,1,-69.1,-16.0,4.7,0,-65.5,-27.6,4.1,0,-72.4,9.5,4.1,0,-62.0,-38.7,4.4,0,-16.7,72.5,6.8,1,43.4,60.6,3.0,1,-56.8,-49.5,4.7,0,-61.5,44.8,7.4,1,26.0,-72.0,4.2,0,-49.8,-58.6,4.7,0,41.7,-64.7,4.1,0,11.1,-76.4,4.4,0,-2.3,-77.5,4.4,0,-41.2,-66.0,4.7,0,-15.2,-76.5,4.8,0,-29.4,-72.3,5.0,0,33.1,71.0,3.8,1,58.5,-53.6,4.1,0,-80.2,-0.4,5.1,0,-76.9,-28.1,4.8,0,-38.7,72.8,8.1,1,19.1,81.3,4.8,1,73.2,-41.3,4.2,0,-78.0,34.8,7.4,1,-75.6,-42.8,5.7,0,-86.3,-12.3,5.4,0,81.1,32.3,1.5,0,77.4,40.7,1.0,0,86.4,-25.2,4.1,0,0.8,90.1,6.0,1,68.1,60.5,1.6,0,62.1,-67.3,2.8,0,-62.0,67.7,9.2,1,-70.6,-59.0,6.6,0,47.5,-78.9,3.5,0,29.9,-87.4,4.5,0,11.3,-92.8,5.0,0,-91.0,22.9,7.4,1,64.1,69.0,1.7,0,-8.1,-94.9,5.5,0,-59.8,-74.2,6.8,0,-92.0,-26.0,6.3,0,-27.3,-92.4,6.1,0,-44.9,-85.9,6.8,0,-21.5,95.7,7.0,1,98.6,-6.1,4.3,0,58.1,80.3,2.8,0,86.4,52.7,1.0,0,-101.6,6.9,8.6,1,-85.6,57.3,10.1,1,82.4,63.7,1.0,0,-95.4,-43.6,8.1,0,47.7,93.5,4.0,0,-45.7,97.1,7.7,1,91.3,-60.4,4.0,0,75.9,-78.9,3.6,0,79.5,75.6,2.0,0,37.6,-103.6,5.1,0,58.0,-93.9,4.4,0,-91.7,-63.3,8.8,0,-110.9,-14.0,9.4,1,110.7,16.1,4.7,0,32.1,107.5,5.3,0,15.6,-111.9,5.7,0,75.1,85.7,2.8,0,109.4,-33.8,3.4,0,-107.6,40.3,10.9,1,-6.8,-115.6,6.3,0,106.2,-48.1,3.4,1,-81.9,-83.1,8.5,0,-71.3,93.2,8.3,1,-29.2,-114.2,7.1,0,-50.2,-107.9,7.8,0,-68.5,-97.5,8.2,0,118.3,-18.1,2.6,0,97.5,-69.9,3.4,1,67.6,100.3,4.2,0,-115.2,-38.4,9.2,1,12.3,121.0,7.2,0,122.0,-8.6,1.9,0,59.6,-106.9,3.0,1,118.8,39.5,5.1,0,-124.1,17.6,11.1,1,100.0,76.4,3.7,0,38.2,-120.0,4.7,1,86.7,-93.3,3.8,1,-112.0,-62.1,8.1,1,-98.2,83.7,9.0,1,55.2,117.6,6.2,0,-11.8,130.0,8.8,0,18.9,-132.4,5.8,1,-134.7,-7.6,10.9,1,-104.2,-85.7,7.0,1,72.4,-114.5,3.9,1,91.7,104.1,4.6,0,-5.4,-139.4,6.9,1,-123.3,67.5,9.2,1,-40.3,134.8,10.1,0,36.0,136.7,8.7,0,125.8,66.1,4.5,0,-29.6,-140.0,7.4,1,-139.4,-33.9,10.6,1,56.4,-132.5,3.9,1,-52.7,-135.0,8.2,1,-75.7,-124.4,9.0,1,-99.4,-108.2,11.2,1,-135.4,-61.0,10.2,1,-122.4,-86.1,10.0,1,-143.3,46.6,9.1,1,148.4,-27.9,3.5,1,137.3,-64.1,3.6,1,38.0,-147.1,4.6,1,-72.0,134.1,11.4,0,152.7,9.2,3.4,1,7.9,155.6,10.8,0,122.1,-97.0,3.4,1,71.2,139.3,6.6,0,151.3,43.6,3.4,1,-157.8,22.7,9.5,1,126.5,98.5,4.6,0,13.2,-161.7,5.3,1,101.1,-128.1,3.4,1,-106.0,126.0,12.5,0,-168.2,-4.9,9.7,1,-46.4,-162.0,6.5,1,-28.0,167.1,12.0,0,43.4,164.2,6.7,0,-76.1,-154.4,7.7,1,75.3,-155.5,3.0,1,-18.1,-171.9,5.9,1,114.5,132.0,5.8,0,-171.8,-33.4,9.3,1,-106.1,-139.9,8.6,1,-138.9,109.9,13.4,0,-166.9,-61.9,9.6,1,-133.4,-118.0,9.3,1,-154.3,-90.2,9.8,1,10.1,181.8,6.1,0,-67.4,170.4,13.0,0,44.7,-178.1,3.0,1,-168.2,85.9,13.8,0,93.5,164.4,5.4,0,-28.9,191.5,5.2,0,10.5,-195.4,3.1,1,-57.4,-187.3,5.2,1,-108.7,164.5,13.2,0,-191.1,56.2,13.6,0,62.4,190.4,5.8,0,-91.3,-181.5,6.1,1,-206.4,21.4,13.4,0,-148.7,148.3,13.5,0,-124.8,-168.9,6.7,1,23.1,208.8,6.0,0,-212.9,-16.0,12.6,0,-154.7,-147.3,7.5,1,-180.3,-118.2,8.6,1,-210.1,-53.1,11.7,0,-199.5,-87.4,10.3,0,-20.9,219.3,6.5,0,-186.3,123.9,13.4,0,-74.8,-213.4,2.3,0,-67.4,220.0,7.1,0,-216.7,91.6,12.7,0,-115.1,210.5,8.0,0,-117.6,-209.7,3.0,0,-238.9,51.6,11.8,0,-205.0,-141.5,6.0,0,-161.4,191.4,8.2,0,-251.7,8.5,11.5,0,-228.0,-111.7,8.0,0,-161.8,-197.1,3.5,0,-245.2,-75.1,9.3,0,-254.7,-34.0,10.3,0,-201.4,167.1,7.2,0,-202.4,-176.5,4.1,0,-235.4,136.5,6.7,0,-261.5,100.4,6.8,0,-241.1,-148.8,4.1,0,-282.8,57.6,6.2,0,-268.6,-113.9,4.7,0,-294.6,11.7,5.8,0,-287.0,-76.0,4.8,0,-296.4,-33.5,5.3,0];
+    var emblem = document.getElementById('elogoEmblem');
+    var dotRoot = document.getElementById('emDots');
+    var emCore = document.getElementById('emCore'), emHalo = document.getElementById('emHalo');
     var seed = 5;
     function rnd() { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }
-    var dots = [];
+    var dots = [], N = EMBLEM.length / 4;
     for (var i = 0; i < N; i++) {
-      var th = i * 2.399963, rad = 10.2 * Math.sqrt(i + 3);
-      var deg = ((th * 180 / Math.PI) % 360 + 360) % 360;
-      var gold = deg > 110 && deg < 290 && rad < 104;
-      var sa = rnd() * Math.PI * 2, sr = 380 + rnd() * 520;
+      var sa = rnd() * Math.PI * 2, sr = 520 + rnd() * 700;
       dots.push({
-        tx: rad * Math.cos(th), ty: rad * Math.sin(th),
+        tx: EMBLEM[i * 4], ty: EMBLEM[i * 4 + 1],
         sx: sr * Math.cos(sa), sy: sr * Math.sin(sa),
-        n: el('circle', { r: (1.3 + rad / 34).toFixed(2), fill: gold ? '#f0b020' : '#5f82d6', opacity: 0 }, spiralRoot)
+        n: el('circle', { r: EMBLEM[i * 4 + 2], class: EMBLEM[i * 4 + 3] ? 'dg' : 'dn', opacity: 0 }, dotRoot)
       });
     }
     var halo = document.getElementById('emergeHalo');
-    var core = document.getElementById('emergeCore');
 
     // --- Architecture layers: each plate gets its own line drawing
     var PATTERNS = {
@@ -132,84 +130,123 @@
     var layerBox = document.getElementById('elayers');
     var labels = Array.prototype.slice.call(document.querySelectorAll('#emergeLabels span'));
     var logo = document.getElementById('emergeLogo');
+    var plate = document.getElementById('elogoPlate');
+    var part = {};
+    ['emblem', 'word', 'tag', 'line'].forEach(function (k) { var d = logo.querySelector('.ep-' + k); part[k] = { el: d, img: d.querySelector('img') }; });
     var cue = document.getElementById('emergeCue');
     var fin = document.getElementById('emergeFinal');
     var hud = Array.prototype.slice.call(document.querySelectorAll('#emergeHud li'));
     var bar = document.getElementById('emergeBar');
+    function mix(a, b, t) { return a + (b - a) * t; }
 
     var pv = 0, lastKey = '';
     var mouse = follower(0.07);
     function render(p) {
       var W = stage.clientWidth, H = stage.clientHeight;
       var narrow = W < 700;
-      var s1 = ease((p - 0.03) / 0.37);   // radial activation
-      var s2 = easeIO((p - 0.40) / 0.17); // emblem + logo reveal
-      var s3 = easeIO((p - 0.58) / 0.26); // architecture unfolds
-      var s4 = ease((p - 0.86) / 0.1);    // complete world
+      var A = ease((p - 0.03) / 0.27);    // 1 · rings + emblem assemble
+      var M = easeIO((p - 0.31) / 0.09);  // emblem slides into its place in the logo
+      var Wd = easeIO((p - 0.34) / 0.10); // 2 · CORE5 rises
+      var T = easeIO((p - 0.45) / 0.08);  // 3 · TECHNOLOGY PARTNER
+      var T2 = easeIO((p - 0.50) / 0.06); //     reliable · innovative · future ready
+      var B = easeIO((p - 0.56) / 0.08);  // 4 · white backing
+      var X = easeIO((p - 0.67) / 0.21);  // architecture unfolds
+      var F = ease((p - 0.89) / 0.08);    // complete world
       var mx = mouse.x, my = mouse.y;
 
-      stage.style.setProperty('--g', (0.22 + 0.78 * s1).toFixed(3));
-      stage.style.setProperty('--l', (s1 * 0.95).toFixed(3));
+      stage.style.setProperty('--g', (0.22 + 0.78 * A).toFixed(3));
+      stage.style.setProperty('--l', (A * 0.95).toFixed(3));
       cue.style.opacity = (1 - clamp(p / 0.035, 0, 1)).toFixed(2);
 
-      // Mechanism: grows in, contracts around the logo, then lays down as the floor orbit
-      var scale = (0.86 + 0.14 * s1) * (1 - 0.16 * s2) * (1 + (narrow ? 0.5 : 0.32) * s3);
+      // Rings: grow in, keep turning through the whole sequence, then lay down as the floor orbit
+      var scale = (0.86 + 0.14 * A) * (1 + (narrow ? 0.5 : 0.32) * X);
       mech.style.transform =
-        'translate3d(' + (mx * 22).toFixed(1) + 'px,' + (my * 16 + s3 * H * (narrow ? 0.2 : 0.22)).toFixed(1) + 'px,0) ' +
-        'rotateX(' + (s3 * 72 - my * 10 * (1 - s3 * 0.5)).toFixed(2) + 'deg) rotateY(' + (mx * 12 * (1 - s3 * 0.6)).toFixed(2) + 'deg) scale(' + scale.toFixed(3) + ')';
-
+        'translate3d(' + (mx * 30).toFixed(1) + 'px,' + (my * 22 + X * H * (narrow ? 0.2 : 0.22)).toFixed(1) + 'px,0) ' +
+        'rotateX(' + (X * 72 - my * 13 * (1 - X * 0.5)).toFixed(2) + 'deg) rotateY(' + (mx * 16 * (1 - X * 0.6)).toFixed(2) + 'deg) scale(' + scale.toFixed(3) + ')';
       ringEls.forEach(function (g, i) {
         var R = RINGS[i];
-        var a = ease((p - 0.04 - i * 0.05) / 0.14);
-        var ang = R.dir * R.spd * p * 720 * (1 - s2 * 0.35) + R.dir * mx * 6 * (i + 1);
-        g.setAttribute('opacity', (a * (1 - 0.4 * s3)).toFixed(3));
+        var a = ease((p - 0.04 - i * 0.04) / 0.12);
+        var ang = R.dir * R.spd * p * 640 + R.dir * mx * 8 * (i + 1);
+        g.setAttribute('opacity', (a * (1 - 0.25 * B * (1 - X)) * (1 - 0.4 * X)).toFixed(3));
         g.setAttribute('transform', 'rotate(' + ang.toFixed(2) + ') scale(' + (0.72 + 0.28 * a).toFixed(3) + ')');
       });
+      halo.setAttribute('r', (30 + 80 * A + 40 * X).toFixed(1));
+      halo.setAttribute('opacity', ((0.35 + 0.65 * A) * (1 - 0.6 * M * (1 - X))).toFixed(2));
 
-      var sp = clamp((p - 0.1) / 0.3, 0, 1);
-      var rot = (-150 * (1 - ease(sp)) + p * 70) * Math.PI / 180;
-      var spread = 1 + 0.9 * s2;
+      // Logo box (exact logo.png proportions): centred, then lifted above the stack
+      var Lw = logo.offsetWidth, Lh = logo.offsetHeight;
+      var lm = mix(30, -14, M), lmy = mix(22, -10, M);
+      logo.style.transform = 'translate(-50%,-50%) translate3d(' + (mx * lm).toFixed(1) + 'px,' + (my * lmy - X * H * (narrow ? 0.3 : 0.335)).toFixed(1) + 'px,0) scale(' + (1 - (narrow ? 0.35 : 0.52) * X).toFixed(3) + ')';
+
+      // Emblem: starts on the stage centre at the rings' scale, then settles into the logo
+      var unit = Math.min(W, H) * 0.86 / 1000;     // px per ring unit
+      var k1 = unit * 0.56 / (Lw / 1600);           // stage-1 emblem size relative to its logo size
+      var em = 0.92 + 0.08 * A;
+      emblem.style.transform = 'translate(' + (0.2738 * Lw * (1 - M)).toFixed(1) + 'px,' + (0.0374 * Lh * (1 - M)).toFixed(1) + 'px) scale(' + (mix(k1, 1, M) * mix(em, 1, M)).toFixed(4) + ')';
+      var sp = clamp((p - 0.05) / 0.25, 0, 1);
+      var rot = -130 * (1 - ease(sp)) * Math.PI / 180;
       var cr = Math.cos(rot), sr = Math.sin(rot);
       dots.forEach(function (d, k) {
-        var t = ease((sp - (k / N) * 0.4) / 0.6);
-        var x = d.sx + (d.tx * spread - d.sx) * t, y = d.sy + (d.ty * spread - d.sy) * t;
+        var t = ease((sp - (k / N) * 0.45) / 0.55);
+        var x = d.sx + (d.tx - d.sx) * t, y = d.sy + (d.ty - d.sy) * t;
         d.n.setAttribute('cx', (x * cr - y * sr).toFixed(1));
         d.n.setAttribute('cy', (x * sr + y * cr).toFixed(1));
-        d.n.setAttribute('opacity', (t * (1 - 0.55 * s2) * (1 - 0.5 * s3)).toFixed(3));
+        d.n.setAttribute('opacity', t.toFixed(3));
       });
-      core.setAttribute('r', (6 + 9 * s1).toFixed(2));
-      halo.setAttribute('r', (30 + 80 * s1 + 40 * s3).toFixed(1));
-      halo.setAttribute('opacity', (0.35 + 0.65 * s1).toFixed(2));
+      var c0 = ease((p - 0.03) / 0.1);
+      emCore.setAttribute('r', (25.25 * c0).toFixed(2));
+      emHalo.setAttribute('opacity', (c0 * (1 - B)).toFixed(3));
+      // On dark, navy dots are lifted to a readable blue; on the white backing they return to logo navy
+      var nb = [109 + (2 - 109) * B, 143 + (24 - 143) * B, 224 + (87 - 224) * B].map(Math.round);
+      emblem.style.setProperty('--dn', 'rgb(' + nb.join(',') + ')');
+      var swap = clamp((B - 0.55) / 0.4, 0, 1);    // hand over to the exact asset
+      emblem.style.opacity = (1 - swap).toFixed(3);
+      part.emblem.el.style.opacity = swap.toFixed(3);
 
-      // Logo: the real asset, revealed through an opening lens, then lifted above the stack
-      logo.style.opacity = s2.toFixed(3);
-      logo.style.clipPath = 'circle(' + (s2 * 82).toFixed(2) + '% at 50% 50%)';
-      logo.style.transform = 'translate(-50%,-50%) translate3d(' + (mx * -14).toFixed(1) + 'px,' + (my * -10 - s3 * H * (narrow ? 0.3 : 0.31)).toFixed(1) + 'px,0) scale(' + (1 - 0.3 * s3).toFixed(3) + ')';
+      // A soft rim light keeps the navy letters legible on dark until the white backing arrives
+      var glow = 1 - B;
+      var rim = glow > 0.01 ? 'drop-shadow(0 0 1px rgba(255,255,255,' + (0.9 * glow).toFixed(2) + ')) drop-shadow(0 0 18px rgba(255,255,255,' + (0.28 * glow).toFixed(2) + '))' : 'none';
+      // CORE5 rises from below its baseline and attaches to the emblem
+      part.word.el.style.opacity = Wd > 0 ? 1 : 0;
+      part.word.img.style.transform = 'translate(' + (-(1 - Wd) * 5).toFixed(2) + '%,' + ((1 - Wd) * 48).toFixed(2) + '%)';
+      part.word.img.style.filter = rim;
+      // Tagline: rules and TECHNOLOGY PARTNER open outward from the centre, then the values line rises
+      var cl = 34 + 30.7 * (1 - T), cr2 = 35.3 * (1 - T);
+      part.tag.el.style.opacity = T > 0 ? 1 : 0;
+      part.tag.el.style.clipPath = 'inset(61% ' + cr2.toFixed(2) + '% 20.9% ' + cl.toFixed(2) + '%)';
+      part.tag.img.style.transform = 'translateY(' + ((1 - T) * 6).toFixed(2) + '%)';
+      part.line.el.style.opacity = T2.toFixed(3);
+      part.line.img.style.transform = 'translateY(' + ((1 - T2) * 9).toFixed(2) + '%)';
+      part.line.img.style.filter = rim;
+      // White backing: a line of light that opens into the panel
+      var bx = ease(B / 0.6), by = 0.03 + 0.97 * easeIO((B - 0.3) / 0.7);
+      plate.style.opacity = clamp(B * 3, 0, 1).toFixed(3);
+      plate.style.transform = 'scale(' + bx.toFixed(4) + ',' + by.toFixed(4) + ')';
 
       // Layers rise one after another
       var L = Math.round(clamp(Math.min(W, H) * (narrow ? 0.5 : 0.34), 150, 300));
       layerBox.style.setProperty('--L', L + 'px');
-      layerBox.style.transform = 'translateY(' + (narrow ? 2 : 0) + 'vh) rotateX(' + (58 - my * 9).toFixed(2) + 'deg) rotateZ(' + (-45 + mx * 16).toFixed(2) + 'deg)';
+      layerBox.style.transform = 'translateY(' + (narrow ? 2 : 0) + 'vh) rotateX(' + (58 - my * 12).toFixed(2) + 'deg) rotateZ(' + (-45 + mx * 21).toFixed(2) + 'deg)';
       var gap = L * 0.17;
       layers.forEach(function (Ly, i) {
-        var l = ease((p - 0.62 - i * 0.045) / 0.09);
-        Ly.style.opacity = l.toFixed(3);
-        Ly.style.transform = 'translateZ(' + (i * gap * l + (1 - l) * -60).toFixed(1) + 'px)';
+        var lv = ease((p - 0.70 - i * 0.035) / 0.08);
+        Ly.style.opacity = lv.toFixed(3);
+        Ly.style.transform = 'translateZ(' + (i * gap * lv + (1 - lv) * -60).toFixed(1) + 'px)';
       });
       var sr0 = stage.getBoundingClientRect();
       layers.forEach(function (Ly, i) {
         var lab = labels[i];
-        var o = clamp(parseFloat(Ly.style.opacity) * (s3 > 0.4 ? 1 : 0), 0, 1);
+        var o = clamp(parseFloat(Ly.style.opacity) * (X > 0.4 ? 1 : 0), 0, 1);
         lab.style.opacity = narrow ? 0 : o.toFixed(3);
         if (o > 0) {
-          var r = Ly.getBoundingClientRect();
-          lab.style.transform = 'translate(' + (r.right - sr0.left + 8).toFixed(0) + 'px,' + (r.top - sr0.top + r.height * 0.5 - 8).toFixed(0) + 'px)';
+          var rr = Ly.getBoundingClientRect();
+          lab.style.transform = 'translate(' + (rr.right - sr0.left + 8).toFixed(0) + 'px,' + (rr.top - sr0.top + rr.height * 0.5 - 8).toFixed(0) + 'px)';
         }
       });
 
-      fin.style.opacity = s4.toFixed(3);
-      fin.style.transform = 'translateY(' + ((1 - s4) * 24).toFixed(1) + 'px)';
-      var stageIdx = p < 0.12 ? 0 : p < 0.4 ? 1 : p < 0.58 ? 2 : p < 0.86 ? 3 : 4;
+      fin.style.opacity = F.toFixed(3);
+      fin.style.transform = 'translateY(' + ((1 - F) * 24).toFixed(1) + 'px)';
+      var stageIdx = p < 0.04 ? 0 : p < 0.31 ? 1 : p < 0.66 ? 2 : p < 0.89 ? 3 : 4;
       hud.forEach(function (li, k) { li.classList.toggle('is-on', k === stageIdx); li.classList.toggle('is-done', k < stageIdx); });
       bar.style.transform = 'scaleX(' + p.toFixed(3) + ')';
     }
@@ -333,9 +370,9 @@
     loopWhileVisible(hero, function () {
       m.step();
       var sy = clamp(-hero.getBoundingClientRect().top, 0, 1200);
-      media.style.transform = 'translate3d(' + (m.x * -26).toFixed(1) + 'px,' + (m.y * -18 + sy * 0.22).toFixed(1) + 'px,0) scale(1.04)';
-      if (hud) hud.style.transform = 'translate3d(' + (m.x * 38).toFixed(1) + 'px,' + (m.y * 24).toFixed(1) + 'px,0)';
-      if (copy) copy.style.transform = 'translate3d(' + (m.x * 8).toFixed(1) + 'px,' + (m.y * 5 - sy * 0.08).toFixed(1) + 'px,0)';
+      media.style.transform = 'translate3d(' + (m.x * -34).toFixed(1) + 'px,' + (m.y * -24 + sy * 0.22).toFixed(1) + 'px,0) scale(1.06)';
+      if (hud) hud.style.transform = 'translate3d(' + (m.x * 50).toFixed(1) + 'px,' + (m.y * 31).toFixed(1) + 'px,0)';
+      if (copy) copy.style.transform = 'translate3d(' + (m.x * 10).toFixed(1) + 'px,' + (m.y * 6.5 - sy * 0.08).toFixed(1) + 'px,0)';
     });
   })();
 
@@ -525,7 +562,7 @@
     var idxBtns = section.querySelectorAll('#topoIndex button');
     var iso = makeIso(canvas);
     var P = iso.P;
-    iso.shear = 0.32; iso.drift = 0.45;
+    iso.shear = 0.42; iso.drift = 0.58;
 
     var R = 1.8, NAMES = ['CLOUD INFRASTRUCTURE', 'SECURITY & GOVERNANCE', 'DATA ARCHITECTURE', 'AI / MACHINE LEARNING', 'ENTERPRISE APPLICATIONS'];
     var r = rng(23), racks = [];
@@ -774,7 +811,7 @@
     if (!canvas || !canvas.getContext) return;
     var section = canvas.closest('section');
     var iso = makeIso(canvas), P = iso.P;
-    iso.shear = 0.34; iso.drift = 0.5;
+    iso.shear = 0.45; iso.drift = 0.65;
     var r = rng(41), blocks = [];
     for (var x = -5; x <= 4; x++) for (var y = -5; y <= 4; y++) {
       var cx = x + 0.5, cy = y + 0.5, d = Math.max(Math.abs(cx), Math.abs(cy));
@@ -783,16 +820,18 @@
       blocks.push({ x: x + 0.06, y: y + 0.06, h: core ? 3.6 : Math.max(0.25, (4.8 - d) * 0.62 + (r() - 0.5) * 0.3), d: d, core: core });
     }
     blocks.sort(function (a, b) { return (a.x + a.y) - (b.x + b.y); });
-    var started = 0, mouse = follower(0.06);
+    var started = 0, mouse = follower(0.06), q = 0, baseS = 20;
+    var clip = document.getElementById('finaleClip');
     function layout() {
       iso.fit();
       var wide = iso.W > 960;
-      iso.S = wide ? Math.min(iso.W / 21, iso.H / 15) : Math.min(iso.W / 15, iso.H / 24);
+      baseS = wide ? Math.min(iso.W / 21, iso.H / 15) : Math.min(iso.W / 15, iso.H / 24);
       iso.ox = wide ? iso.W * 0.74 : iso.W * 0.5;
       iso.oy = wide ? iso.H * 0.76 : iso.H * 0.54;
     }
     function draw(now) {
       var ctx = iso.ctx, t = reduceMotion ? 1e5 : now - started;
+      iso.S = baseS * (1.05 - 0.09 * q); // the structure recedes slightly as you scroll past: a slow zoom-out
       ctx.clearRect(0, 0, iso.W, iso.H);
       for (var i = -7; i <= 7; i++) {
         var al = 0.06 * (1 - Math.abs(i) / 8);
@@ -819,15 +858,108 @@
       var beam = ctx.createLinearGradient(c[0], c[1], c[0], c[1] - iso.S * 6);
       beam.addColorStop(0, 'rgba(240,176,32,0.45)'); beam.addColorStop(1, 'rgba(240,176,32,0)');
       ctx.fillStyle = beam; ctx.fillRect(c[0] - 1, c[1] - iso.S * 6, 2, iso.S * 6);
+      if (clip) clip.style.setProperty('--hz', (1.05 - 0.09 * q).toFixed(4));
     }
-    layout();
-    window.addEventListener('resize', function () { layout(); if (reduceMotion) draw(0); });
-    if (reduceMotion) { draw(0); return; }
+
+    /* ---- Cosmos: one star field in shared coordinates, drawn into the finale canvas
+       and the footer canvas so it carries across the section boundary without a seam */
+    var skies = ['finaleSky', 'footerSky'].map(function (id) { var cv = document.getElementById(id); return cv && { cv: cv, ctx: cv.getContext('2d') }; }).filter(Boolean);
+    var stars = [], band = null, VW = 0, VH = 0, HF = 0;
+    function skyLayout() {
+      var top0 = section.getBoundingClientRect().top;
+      var dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+      skies.forEach(function (s) {
+        var r = s.cv.getBoundingClientRect();
+        s.off = r.top - top0; s.w = r.width; s.h = r.height;
+        s.cv.width = Math.round(r.width * dpr); s.cv.height = Math.round(r.height * dpr);
+        s.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        VH = Math.max(VH, s.off + s.h);
+      });
+      VW = section.clientWidth; HF = section.offsetHeight;
+      var rr = rng(7); stars = [];
+      var area = VW * VH;
+      [[0.25, 4200, 0.35, 0.8, 0.12, 0.38], [0.55, 12000, 0.6, 1.1, 0.2, 0.5], [1, 36000, 0.9, 1.6, 0.3, 0.68]].forEach(function (L) {
+        var n = Math.round(area / L[1]);
+        for (var i = 0; i < n; i++) stars.push({
+          x: rr() * VW, y: rr() * VH, z: L[0],
+          r: L[2] + rr() * (L[3] - L[2]), a: L[4] + rr() * (L[5] - L[4]),
+          warm: rr() < 0.09, tw: 0.4 + rr() * 1.4, ph: rr() * 6.28
+        });
+      });
+      // Milky-way band: soft dust along a shallow diagonal, pre-rendered once at half resolution
+      band = document.createElement('canvas');
+      band.width = Math.ceil(VW / 2); band.height = Math.ceil(VH / 2);
+      var b = band.getContext('2d'); b.scale(0.5, 0.5);
+      var x0 = -0.1 * VW, y0 = HF * 0.92, x1 = 1.1 * VW, y1 = HF * 0.08;
+      var dx = x1 - x0, dy = y1 - y0, len = Math.hypot(dx, dy), nx = -dy / len, ny = dx / len;
+      for (var k = 0; k < 7; k++) {
+        var u = 0.1 + k * 0.13 + rr() * 0.05, px = x0 + dx * u, py = y0 + dy * u, rad = VW * (0.12 + rr() * 0.08);
+        var g = b.createRadialGradient(px, py, 0, px, py, rad);
+        g.addColorStop(0, k === 4 ? 'rgba(240,176,32,0.045)' : 'rgba(76,108,190,0.075)'); g.addColorStop(1, 'rgba(76,108,190,0)');
+        b.fillStyle = g; b.fillRect(px - rad, py - rad, rad * 2, rad * 2);
+      }
+      for (var j = 0; j < 2600; j++) {
+        var uu = rr(), vv = ((rr() + rr() + rr()) / 3 - 0.5) * VW * 0.3;
+        b.fillStyle = 'rgba(205,215,245,' + (0.03 + rr() * 0.09).toFixed(3) + ')';
+        b.fillRect(x0 + dx * uu + nx * vv, y0 + dy * uu + ny * vv, 1.2, 1.2);
+      }
+    }
+    function drawSky(now) {
+      if (!skies.length) return;
+      var t = now / 1000, mx = mouse.x, my = mouse.y;
+      var vpx = VW * 0.72, vpy = HF * 0.74;
+      skies.forEach(function (s) {
+        var ctx = s.ctx;
+        ctx.clearRect(0, 0, s.w, s.h);
+        // band = deepest layer
+        var bs = 1 + 0.1 * (1 - q), bdx = mx * 10, bdy = (q - 0.5) * HF * 0.16 + my * 7;
+        ctx.globalAlpha = 1;
+        ctx.drawImage(band, vpx - vpx * bs + bdx, vpy - vpy * bs + bdy - s.off, VW * bs, VH * bs);
+        // atmosphere straddling the section boundary, so the light carries into the footer
+        var gx = VW * 0.62 + mx * 14, gy = HF - s.off, gr = Math.max(VW * 0.6, 520);
+        var ag = ctx.createRadialGradient(gx, gy, 0, gx, gy, gr);
+        ag.addColorStop(0, 'rgba(24,58,128,0.42)'); ag.addColorStop(0.45, 'rgba(18,48,105,0.18)'); ag.addColorStop(1, 'rgba(18,48,105,0)');
+        ctx.fillStyle = ag; ctx.fillRect(0, 0, s.w, s.h);
+        stars.forEach(function (st) {
+          var sc = 1 + 0.16 * st.z * (1 - q);                       // zooming out: nearer stars travel further
+          var x = vpx + (st.x - vpx) * sc + mx * (8 + 30 * st.z);
+          var y = vpy + (st.y - vpy) * sc + (q - 0.5) * HF * 0.2 * (1 - st.z * 0.75) + my * (6 + 20 * st.z) - s.off;
+          if (y < -4 || y > s.h + 4 || x < -4 || x > s.w + 4) return;
+          var a = st.a * (st.z > 0.3 ? 0.78 + 0.22 * Math.sin(t * st.tw + st.ph) : 1);
+          ctx.fillStyle = st.warm ? 'rgba(255,214,150,' + a.toFixed(3) + ')' : 'rgba(214,224,255,' + a.toFixed(3) + ')';
+          ctx.beginPath(); ctx.arc(x, y, st.r, 0, 6.2832); ctx.fill();
+          if (st.z === 1) { ctx.fillStyle = 'rgba(214,224,255,' + (a * 0.08).toFixed(3) + ')'; ctx.beginPath(); ctx.arc(x, y, st.r * 4, 0, 6.2832); ctx.fill(); }
+        });
+      });
+    }
+    function progress() {
+      var r = section.getBoundingClientRect(), vh = window.innerHeight;
+      q = clamp((vh - r.top) / (vh + r.height), 0, 1);
+    }
+
+    layout(); skyLayout(); progress();
+    var footer = document.getElementById('footerSky');
+    var footEl = footer && footer.parentNode;
+    var sound = footEl && footEl.querySelector('.footer-statement p');
+    function riseStatement() {
+      if (!sound) return;
+      var r = sound.getBoundingClientRect(), vh = window.innerHeight;
+      sound.style.setProperty('--rise', (0.18 + 0.82 * ease((vh - r.top) / (vh * 0.55))).toFixed(3));
+    }
+    window.addEventListener('resize', function () { layout(); skyLayout(); progress(); if (reduceMotion) { draw(0); drawSky(0); } });
+    if (reduceMotion) { draw(0); drawSky(0); return; }
     onVisible(section, function (v) { if (v && !started) started = performance.now(); });
-    loopWhileVisible(section, function (now) {
+    var last = -1;
+    function frame(now) {
+      if (now === last) return; // finale and footer loops can share a frame
+      last = now;
       if (!started) started = now;
       mouse.step(); iso.mx = mouse.x; iso.my = mouse.y;
-      draw(now);
-    });
+      progress(); riseStatement();
+      if (section.getBoundingClientRect().bottom > 0) draw(now);
+      drawSky(now);
+    }
+    loopWhileVisible(section, frame);
+    if (footEl) loopWhileVisible(footEl, frame);
   })();
 })();

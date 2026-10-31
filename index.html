@@ -101,9 +101,7 @@
           <radialGradient id="coreHalo"><stop offset="0" stop-color="rgba(240,176,32,.45)"/><stop offset="1" stop-color="rgba(240,176,32,0)"/></radialGradient>
         </defs>
         <g id="emergeRings"></g>
-        <g id="emergeSpiral"></g>
         <circle r="70" fill="url(#coreHalo)" id="emergeHalo"/>
-        <circle r="13" fill="url(#coreGlow)" id="emergeCore"/>
       </svg>
 
       <div class="elayers" id="elayers">
@@ -123,8 +121,22 @@
       <span><b>L5</b>Enterprise applications</span>
     </div>
 
-    <div class="emerge-logo" id="emergeLogo">
-      <img src="assets/img/logo.png" alt="Core5 — Technology Partner. Reliable, innovative, future ready." width="1600" height="575">
+    <!-- The logo assembles from cut-outs of the unmodified logo.png; the emblem SVG is rebuilt from its measured dots -->
+    <div class="emerge-logo" id="emergeLogo" role="img" aria-label="Core5 — Technology Partner. Reliable, innovative, future ready.">
+      <div class="elogo-plate" id="elogoPlate"></div>
+      <svg class="elogo-emblem" id="elogoEmblem" viewBox="-310 -310 620 620" aria-hidden="true">
+        <defs>
+          <radialGradient id="emSphere" cx=".5" cy=".5" fx=".42" fy=".36" r=".55"><stop offset="0" stop-color="#fff3c4"/><stop offset=".28" stop-color="#f2c04a"/><stop offset=".72" stop-color="#c58f1c"/><stop offset="1" stop-color="#8a5f10"/></radialGradient>
+          <radialGradient id="emHalo"><stop offset="0" stop-color="rgba(240,176,32,.5)"/><stop offset="1" stop-color="rgba(240,176,32,0)"/></radialGradient>
+        </defs>
+        <circle r="120" fill="url(#emHalo)" id="emHalo"/>
+        <g id="emDots"></g>
+        <circle r="25.25" fill="url(#emSphere)" id="emCore"/>
+      </svg>
+      <div class="elogo-part ep-emblem"><img src="assets/img/logo.png" alt="" width="1600" height="575"></div>
+      <div class="elogo-part ep-word"><img src="assets/img/logo.png" alt="" width="1600" height="575"></div>
+      <div class="elogo-part ep-tag"><img src="assets/img/logo.png" alt="" width="1600" height="575"></div>
+      <div class="elogo-part ep-line"><img src="assets/img/logo.png" alt="" width="1600" height="575"></div>
     </div>
 
     <p class="emerge-cue mono" id="emergeCue" aria-hidden="true"><i></i>Scroll to begin</p>
@@ -135,7 +147,7 @@
     </div>
 
     <ol class="emerge-hud mono" id="emergeHud" aria-hidden="true">
-      <li>01 Signal</li><li>02 Activation</li><li>03 Core5</li><li>04 Architecture</li><li>05 Ecosystem</li>
+      <li>01 Signal</li><li>02 Emblem</li><li>03 Core5</li><li>04 Architecture</li><li>05 Ecosystem</li>
       <i class="emerge-hud-bar"><b id="emergeBar"></b></i>
     </ol>
 
@@ -510,8 +522,11 @@
 
 <!-- ============ CLOSING — editorial ============ -->
 <section class="finale on-dark" aria-labelledby="finaleTitle">
-  <div class="finale-horizon" aria-hidden="true"></div>
-  <canvas class="finale-canvas" id="finaleCanvas" aria-hidden="true"></canvas>
+  <canvas class="cosmos-sky" id="finaleSky" aria-hidden="true"></canvas>
+  <div class="finale-clip" id="finaleClip" aria-hidden="true">
+    <div class="finale-horizon"></div>
+    <canvas class="finale-canvas" id="finaleCanvas"></canvas>
+  </div>
   <div class="container finale-inner">
     <p class="eyebrow">Start a conversation</p>
     <h2 id="finaleTitle" class="finale-title">Ready to accelerate your <em>cloud transformation?</em></h2>
@@ -535,7 +550,8 @@
 
 </main>
 
-<footer class="site-footer">
+<footer class="site-footer site-footer--cosmos">
+  <canvas class="cosmos-sky footer-sky" id="footerSky" aria-hidden="true"></canvas>
   <div class="container">
     <div class="footer-statement">
       <p>Reliable<i>.</i> Innovative<i>.</i><br>Future ready<i>.</i></p>

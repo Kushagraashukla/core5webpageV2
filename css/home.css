@@ -16,7 +16,7 @@
 /* ============================================================
    00 · EMERGENCE — pinned, scroll-driven brand reveal
    ============================================================ */
-.emerge { position: relative; height: 520vh; background: var(--c-night); }
+.emerge { position: relative; height: 640vh; background: var(--c-night); }
 .emerge-stage {
   position: sticky; top: var(--header-h);
   height: calc(100vh - var(--header-h)); height: calc(100svh - var(--header-h));
@@ -85,16 +85,27 @@
 .emerge-labels span::before { content: ""; width: 48px; height: 1px; background: linear-gradient(90deg, transparent, var(--c-gold-light)); }
 .emerge-labels b { color: var(--c-gold-light); font-weight: 500; }
 
+/* Box = exact logo.png proportions; every layer is positioned in the image's own coordinates */
 .emerge-logo {
   position: absolute; left: 50%; top: 50%;
-  width: min(440px, 76vw);
-  padding: 22px 30px; border-radius: 18px;
-  background: #fff;
-  box-shadow: 0 0 0 1px rgba(240,176,32,0.55), 0 30px 80px -20px rgba(240,176,32,0.4), 0 0 140px rgba(240,176,32,0.18);
-  transform: translate(-50%, -50%); opacity: 0;
-  clip-path: circle(0% at 50% 50%);
+  width: min(760px, 84vw); aspect-ratio: 1600 / 575;
+  transform: translate(-50%, -50%);
 }
-.emerge-logo img { width: 100%; height: auto; }
+.elogo-plate {
+  position: absolute; inset: -7% -3.5%; border-radius: 18px; background: #fff;
+  box-shadow: 0 0 0 1px rgba(240,176,32,0.55), 0 30px 80px -20px rgba(240,176,32,0.4), 0 0 140px rgba(240,176,32,0.18);
+  opacity: 0; transform: scale(0, 0);
+}
+/* emblem SVG centred on the logo's gold sphere (361.9, 266 of 1600×575) */
+.elogo-emblem { position: absolute; left: 3.24%; top: -7.65%; width: 38.75%; height: 107.83%; overflow: visible; transform-origin: 50% 50%; --dn: #6d8fe0; }
+.elogo-emblem .dn { fill: var(--dn); }
+.elogo-emblem .dg { fill: #e3a92b; }
+.elogo-part { position: absolute; inset: 0; opacity: 0; }
+.elogo-part img { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.ep-emblem { clip-path: inset(0 66% 0 0); }
+.ep-word { clip-path: inset(0 0 39% 34%); }
+.ep-tag { clip-path: inset(61% 0 20.9% 34%); }
+.ep-line { clip-path: inset(79.1% 0 0 34%); }
 
 .emerge-cue {
   position: absolute; left: 50%; bottom: 14%; transform: translateX(-50%);
@@ -600,7 +611,7 @@ html:not(.js) .testi-count { display: none; }
   .story { min-height: 320px; }
 }
 @media (max-width: 960px) {
-  .emerge { height: 420vh; }
+  .emerge { height: 520vh; }
   .emerge-hud { display: none; }
   .emerge-final { bottom: 40px; right: 24px; }
   .hero-shot { -webkit-mask-image: linear-gradient(180deg, #000 30%, transparent 85%); mask-image: linear-gradient(180deg, #000 30%, transparent 85%); opacity: 0; }
@@ -666,3 +677,24 @@ html:not(.js) .testi-count { display: none; }
   .caps-track, .caps-list { width: 100%; flex-wrap: wrap; justify-content: center; }
   .caps-list li { font-size: clamp(22px, 2.6vw, 34px); padding: 14px 0 14px 28px; gap: 28px; }
 }
+
+/* ============================================================
+   COSMOS — a restrained star field behind the closing section that
+   carries on into the footer statement, so there is no hard boundary
+   ============================================================ */
+.cosmos-sky { position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: -3; pointer-events: none; }
+.finale-clip {
+  position: absolute; inset: 0; z-index: -1; overflow: hidden;
+  -webkit-mask-image: linear-gradient(#000 0, #000 72%, transparent 100%);
+          mask-image: linear-gradient(#000 0, #000 72%, transparent 100%);
+}
+.finale-clip .finale-horizon { z-index: 0; transform: translateX(-50%) scale(var(--hz, 1)); transform-origin: 50% 0; }
+.finale-clip .finale-canvas { z-index: 1; }
+.site-footer--cosmos { isolation: isolate; }
+.site-footer--cosmos > .container { position: relative; }
+.footer-sky {
+  height: 760px; z-index: -1;
+  -webkit-mask-image: linear-gradient(#000 0, rgba(0,0,0,.55) 45%, transparent 100%);
+          mask-image: linear-gradient(#000 0, rgba(0,0,0,.55) 45%, transparent 100%);
+}
+.site-footer--cosmos .footer-statement p { opacity: var(--rise, 1); transform: translateY(calc((1 - var(--rise, 1)) * 40px)); }
