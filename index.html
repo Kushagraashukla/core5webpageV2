@@ -5,65 +5,68 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Core5 Systems &amp; Services | Cloud, AI &amp; IT Consulting</title>
 <meta name="description" content="Core5 Systems & Services is a Google Cloud Advanced Consulting Partner delivering cloud strategy, migration, DevOps, AI/ML, security and managed services to accelerate your digital transformation.">
+<meta name="theme-color" content="#050e26">
 <link rel="icon" href="assets/img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/home.css">
+<script>document.documentElement.classList.add('js')</script>
 </head>
-<body>
+<body class="home">
 
-<div class="scroll-progress"></div>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="scroll-progress" aria-hidden="true"></div>
 
-<!-- ============ HEADER ============ -->
 <header class="site-header">
   <div class="container">
-    <a href="index.html" class="brand"><img src="assets/img/logo.png" alt="Core5 Systems & Services"></a>
+    <a href="index.html" class="brand"><img src="assets/img/logo.png" alt="Core5 Systems &amp; Services" width="1600" height="575"></a>
 
+    <nav aria-label="Primary">
     <ul class="nav-desktop">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html" aria-current="page">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li>
+      <li class="has-dropdown">
         <a href="services.html">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
         <div class="dropdown">
-          <a href="services.html#cloud">Cloud &amp; Infrastructure<small>Strategy, migration, managed cloud</small></a>
-          <a href="services.html#devops">Development &amp; DevOps<small>Custom software, CI/CD engineering</small></a>
-          <a href="services.html#data">Data, Analytics &amp; AI<small>Big data, machine learning, automation</small></a>
-          <a href="services.html#security">Security &amp; Compliance<small>Managed security, risk &amp; audits</small></a>
-          <a href="services.html#erp">Enterprise Resource Planning<small>Implementation &amp; support</small></a>
-          <a href="services.html#staffing">Staffing &amp; Support<small>Staff augmentation, IT support</small></a>
+          <div class="dropdown-grid">
+            <a href="services.html#cloud"><span class="d-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg></span>Cloud &amp; Infrastructure<small>Strategy, migration, managed cloud</small></a>
+            <a href="services.html#devops"><span class="d-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></span>Development &amp; DevOps<small>Custom software, CI/CD engineering</small></a>
+            <a href="services.html#data"><span class="d-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5M10 19V9M16 19v-7M22 19H2"/></svg></span>Data, Analytics &amp; AI<small>Big data, machine learning, automation</small></a>
+            <a href="services.html#security"><span class="d-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>Security &amp; Compliance<small>Managed security, risk &amp; audits</small></a>
+            <a href="services.html#erp"><span class="d-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>Enterprise Resource Planning<small>Implementation &amp; support</small></a>
+            <a href="services.html#staffing"><span class="d-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></span>Staffing &amp; Support<small>Staff augmentation, IT support</small></a>
+          </div>
+          <a href="services.html" class="dropdown-foot">View all services <span>6 practices &rarr;</span></a>
         </div>
       </li>
       <li><a href="case-studies.html">Case Studies</a></li>
       <li><a href="careers.html">Careers</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
+    </nav>
 
     <div class="header-actions">
-      <a href="contact.html" class="header-quote-btn" aria-label="Get a quote">
+      <a href="tel:+919930419595" class="header-phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>99304 19595</a>
+      <a href="contact.html" class="header-quote-btn">
         <span>Get a quote</span>
-        <span class="btn-arrow-circle" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
-        </span>
+        <span class="btn-arrow-circle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
       </a>
-      <button class="nav-toggle" aria-label="Open menu"><span></span></button>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><span></span></button>
     </div>
   </div>
 </header>
 
-<!-- ============ MOBILE NAV ============ -->
-<div class="mobile-nav">
-  <button class="mobile-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+<div class="mobile-nav" id="mobileNav" aria-label="Menu">
+  <button class="mobile-close" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
   <ul>
-    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html" aria-current="page">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li class="has-sub">
-      <a href="#">Services <svg style="width:14px;height:14px;display:inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
+      <a href="services.html" aria-expanded="false">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
       <div class="sub">
+        <a href="services.html">All services</a>
         <a href="services.html#cloud">Cloud &amp; Infrastructure</a>
         <a href="services.html#devops">Development &amp; DevOps</a>
         <a href="services.html#data">Data, Analytics &amp; AI</a>
@@ -76,169 +79,199 @@
     <li><a href="careers.html">Careers</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
+  <div class="mobile-nav-foot">
+    <a href="contact.html" class="btn btn-gold">Get a quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+    <a href="tel:+919930419595">+91 99304 19595</a>
+    <a href="mailto:info@core5.co.in">info@core5.co.in</a>
+  </div>
 </div>
 
-<!-- ============ HERO SLIDER ============ -->
-<section class="hero-slider" aria-label="Hero Carousel" data-active-theme="0">
-  <div class="hero-slider-track">
-    <!-- Slide 1: Electric Blue / AI -->
-    <article class="hero-slide hero-slide-blue active" aria-hidden="false">
-      <div class="hero-slide-bg" style="background-image: url('assets/img/hero/hero-slide-1.jpg');"></div>
-      <div class="hero-slide-overlay"></div>
-      <div class="container hero-slide-container">
-        <div class="hero-slide-content">
-          <h2 class="hero-slide-title">Scalable <span class="hl">AI Solutions</span> Built For Faster Innovation</h2>
-          <p class="hero-slide-text">Empower your enterprise with certified cloud architecture, automated AI/ML pipelines, and intelligent data systems engineered for rapid scale.</p>
-          <a href="services.html#data" class="hero-learn-btn" aria-label="Learn more about Scalable AI Solutions">
-            <span class="btn-text">Learn More</span>
-            <span class="btn-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="4" y1="12" x2="20" y2="12"></line>
-                <polyline points="13 5 20 12 13 19"></polyline>
-              </svg>
-            </span>
-          </a>
-        </div>
-      </div>
-    </article>
+<main id="main">
 
-    <!-- Slide 2: Neon Purple / VR & Future Tech -->
-    <article class="hero-slide hero-slide-purple" aria-hidden="true">
-      <div class="hero-slide-bg" style="background-image: url('assets/img/hero/hero-slide-2.jpg');"></div>
-      <div class="hero-slide-overlay"></div>
-      <div class="container hero-slide-container">
-        <div class="hero-slide-content">
-          <h2 class="hero-slide-title">Customer-Centric &amp; <span class="hl">Future-Ready</span> Solutions</h2>
-          <p class="hero-slide-text">Next-generation immersive interfaces and cloud-native software engineered to grow with your business, ensuring sustained competitive advantage.</p>
-          <a href="services.html#cloud" class="hero-learn-btn" aria-label="Learn more about Future-Ready Solutions">
-            <span class="btn-text">Learn More</span>
-            <span class="btn-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="4" y1="12" x2="20" y2="12"></line>
-                <polyline points="13 5 20 12 13 19"></polyline>
-              </svg>
-            </span>
-          </a>
-        </div>
-      </div>
-    </article>
+<!-- ============ 00 · EMERGENCE (scroll-driven intro) ============ -->
+<section class="emerge" id="emerge" aria-label="Core5 introduction">
+  <div class="emerge-stage" id="emergeStage">
+    <div class="emerge-grid" aria-hidden="true"></div>
+    <div class="emerge-light" aria-hidden="true"></div>
 
-    <!-- Slide 3: Emerald Green / Human-Centric Tech -->
-    <article class="hero-slide hero-slide-green" aria-hidden="true">
-      <div class="hero-slide-bg" style="background-image: url('assets/img/hero/hero-slide-3.jpg');"></div>
-      <div class="hero-slide-overlay"></div>
-      <div class="container hero-slide-container">
-        <div class="hero-slide-content">
-          <h2 class="hero-slide-title">Empowering People Through <span class="hl">Smart Technology</span></h2>
-          <p class="hero-slide-text">Transforming organizations with zero-trust cloud security, seamless team collaboration, and automated operational efficiency that empower teams to achieve more.</p>
-          <a href="services.html#security" class="hero-learn-btn" aria-label="Learn more about Smart Technology Solutions">
-            <span class="btn-text">Learn More</span>
-            <span class="btn-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="4" y1="12" x2="20" y2="12"></line>
-                <polyline points="13 5 20 12 13 19"></polyline>
-              </svg>
-            </span>
-          </a>
-        </div>
+    <div class="emerge-world" id="emergeWorld" aria-hidden="true">
+      <svg class="emerge-mech" id="emergeMech" viewBox="-500 -500 1000 1000">
+        <defs>
+          <radialGradient id="coreGlow"><stop offset="0" stop-color="#ffe08a"/><stop offset=".45" stop-color="#f0b020"/><stop offset="1" stop-color="#a5761c"/></radialGradient>
+          <radialGradient id="coreHalo"><stop offset="0" stop-color="rgba(240,176,32,.45)"/><stop offset="1" stop-color="rgba(240,176,32,0)"/></radialGradient>
+        </defs>
+        <g id="emergeRings"></g>
+        <g id="emergeSpiral"></g>
+        <circle r="70" fill="url(#coreHalo)" id="emergeHalo"/>
+        <circle r="13" fill="url(#coreGlow)" id="emergeCore"/>
+      </svg>
+
+      <div class="elayers" id="elayers">
+        <div class="elayer" data-k="cloud"></div>
+        <div class="elayer" data-k="sec"></div>
+        <div class="elayer" data-k="data"></div>
+        <div class="elayer" data-k="ai"></div>
+        <div class="elayer" data-k="apps"></div>
       </div>
-    </article>
+    </div>
+
+    <div class="emerge-labels" id="emergeLabels" aria-hidden="true">
+      <span><b>L1</b>Cloud infrastructure</span>
+      <span><b>L2</b>Security &amp; governance</span>
+      <span><b>L3</b>Data architecture</span>
+      <span><b>L4</b>AI / machine learning</span>
+      <span><b>L5</b>Enterprise applications</span>
+    </div>
+
+    <div class="emerge-logo" id="emergeLogo">
+      <img src="assets/img/logo.png" alt="Core5 — Technology Partner. Reliable, innovative, future ready." width="1600" height="575">
+    </div>
+
+    <p class="emerge-cue mono" id="emergeCue" aria-hidden="true"><i></i>Scroll to begin</p>
+
+    <div class="emerge-final" id="emergeFinal">
+      <p class="emerge-kicker mono">Core5 Systems &amp; Services</p>
+      <p class="emerge-head">Engineering the next era of <em>enterprise technology.</em></p>
+    </div>
+
+    <ol class="emerge-hud mono" id="emergeHud" aria-hidden="true">
+      <li>01 Signal</li><li>02 Activation</li><li>03 Core5</li><li>04 Architecture</li><li>05 Ecosystem</li>
+      <i class="emerge-hud-bar"><b id="emergeBar"></b></i>
+    </ol>
+
+    <a href="#hero" class="emerge-skip mono">Skip intro &darr;</a>
   </div>
-
-  <!-- Side arrow buttons (prev/next) -->
-  <button type="button" class="hero-arrow hero-arrow-prev" aria-label="Previous slide">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-      <polyline points="15 18 9 12 15 6"></polyline>
-    </svg>
-  </button>
-  <button type="button" class="hero-arrow hero-arrow-next" aria-label="Next slide">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-      <polyline points="9 18 15 12 9 6"></polyline>
-    </svg>
-  </button>
 </section>
 
-<!-- ============ LOGO STRIP ============ -->
-<section class="logo-strip">
-  <div class="container">
-    <p class="logo-strip-title">Trusted Technology Partners</p>
+<!-- ============ 01 · HERO (original three slides) ============ -->
+<section class="hero" id="hero" aria-label="Introduction">
+  <div class="hero-media" id="heroMedia" aria-hidden="true">
+    <figure class="hero-shot is-active" style="--fx:79%;--fy:28%"><img src="assets/img/hero/hero-slide-1.jpg" alt=""></figure>
+    <figure class="hero-shot" style="--fx:78%;--fy:34%"><img src="assets/img/hero/hero-slide-2.jpg" alt="" loading="lazy"></figure>
+    <figure class="hero-shot" style="--fx:80%;--fy:60%"><img src="assets/img/hero/hero-slide-3.jpg" alt="" loading="lazy"></figure>
+  </div>
+  <div class="hero-shade" aria-hidden="true"></div>
+
+  <div class="hero-hud" id="heroHud" aria-hidden="true">
+    <div class="hud-reticle" id="hudReticle">
+      <svg viewBox="-100 -100 200 200"><circle r="88" class="r1"/><circle r="64" class="r2"/><g class="ticks"></g><path d="M-100 0h22M78 0h22M0 -100v22M0 78v22" class="cross"/></svg>
+      <span class="hud-tag mono" id="hudTag">FOCUS 01 — AI SOLUTIONS</span>
+    </div>
+    <span class="hud-corner tl"></span><span class="hud-corner tr"></span><span class="hud-corner bl"></span><span class="hud-corner br"></span>
+    <span class="hud-scan"></span>
   </div>
 
+  <div class="container hero-inner">
+    <div class="hero-copy" id="heroCopy">
+      <p class="hero-kicker"><span class="hero-kicker-dot"></span>Google Cloud Advanced Consulting Partner</p>
+
+      <div class="hero-msgs">
+        <div class="hero-msg is-active" id="heroMsg0" role="tabpanel" aria-labelledby="heroTab0">
+          <h1 class="hero-title" data-split>Scalable <em>AI Solutions</em> Built For Faster Innovation</h1>
+          <p class="hero-text">Empower your enterprise with certified cloud architecture, automated AI/ML pipelines, and intelligent data systems engineered for rapid scale.</p>
+          <div class="hero-ctas">
+            <a href="services.html#data" class="btn btn-gold btn-magnetic" aria-label="Learn more about Scalable AI Solutions">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            <a href="contact.html" class="btn btn-outline">Talk to our team</a>
+          </div>
+        </div>
+        <div class="hero-msg" id="heroMsg1" role="tabpanel" aria-labelledby="heroTab1" aria-hidden="true">
+          <h2 class="hero-title" data-split>Customer-Centric &amp; <em>Future-Ready</em> Solutions</h2>
+          <p class="hero-text">Next-generation immersive interfaces and cloud-native software engineered to grow with your business, ensuring sustained competitive advantage.</p>
+          <div class="hero-ctas">
+            <a href="services.html#cloud" class="btn btn-gold btn-magnetic" aria-label="Learn more about Future-Ready Solutions" tabindex="-1">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            <a href="contact.html" class="btn btn-outline" tabindex="-1">Talk to our team</a>
+          </div>
+        </div>
+        <div class="hero-msg" id="heroMsg2" role="tabpanel" aria-labelledby="heroTab2" aria-hidden="true">
+          <h2 class="hero-title" data-split>Empowering People Through <em>Smart Technology</em></h2>
+          <p class="hero-text">Transforming organizations with zero-trust cloud security, seamless team collaboration, and automated operational efficiency that empower teams to achieve more.</p>
+          <div class="hero-ctas">
+            <a href="services.html#security" class="btn btn-gold btn-magnetic" aria-label="Learn more about Smart Technology Solutions" tabindex="-1">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            <a href="contact.html" class="btn btn-outline" tabindex="-1">Talk to our team</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-tabs" role="tablist" aria-label="Core5 focus areas">
+        <button type="button" class="hero-tab is-active" role="tab" id="heroTab0" aria-selected="true" aria-controls="heroMsg0"><span class="mono">01</span>AI Solutions<i class="hero-tab-bar"></i></button>
+        <button type="button" class="hero-tab" role="tab" id="heroTab1" aria-selected="false" aria-controls="heroMsg1" tabindex="-1"><span class="mono">02</span>Future-Ready<i class="hero-tab-bar"></i></button>
+        <button type="button" class="hero-tab" role="tab" id="heroTab2" aria-selected="false" aria-controls="heroMsg2" tabindex="-1"><span class="mono">03</span>Smart Technology<i class="hero-tab-bar"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <a href="#partners" class="hero-scroll" aria-label="Scroll to content"><span class="mono">Scroll</span><i></i></a>
+</section>
+
+<!-- ============ PARTNERS ============ -->
+<section class="partners" id="partners" aria-labelledby="partnersTitle">
+  <div class="container partners-head">
+    <p class="eyebrow" id="partnersTitle">Trusted Technology Partners</p>
+    <p class="partners-note">We work across the clouds, platforms and security stacks our clients already run on.</p>
+  </div>
   <div class="marquee-dual">
-    <!-- Row 1: Moves Left -->
-    <div class="marquee-row marquee-row-left" aria-label="Technology partners row 1">
+    <div class="marquee-row marquee-row-left">
       <div class="marquee-track">
-        <div class="partner-card"><img src="assets/img/partners/Google.png" alt="Google Cloud"></div>
-        <div class="partner-card"><img src="assets/img/partners/aws.jpg" alt="AWS"></div>
-        <div class="partner-card"><img src="assets/img/partners/Microsoft.png" alt="Microsoft"></div>
-        <div class="partner-card"><img src="assets/img/partners/Nvidia.png" alt="Nvidia"></div>
-        <div class="partner-card"><img src="assets/img/partners/Paloalto.png" alt="Palo Alto Networks"></div>
-        <div class="partner-card"><img src="assets/img/partners/Check-Point.png" alt="Check Point"></div>
-        <div class="partner-card"><img src="assets/img/partners/SentinelOne.png" alt="SentinelOne"></div>
-        <div class="partner-card"><img src="assets/img/partners/SonicWall.png" alt="SonicWall"></div>
-        <!-- Duplicate for seamless infinite loop -->
-        <div class="partner-card"><img src="assets/img/partners/Google.png" alt="Google Cloud"></div>
-        <div class="partner-card"><img src="assets/img/partners/aws.jpg" alt="AWS"></div>
-        <div class="partner-card"><img src="assets/img/partners/Microsoft.png" alt="Microsoft"></div>
-        <div class="partner-card"><img src="assets/img/partners/Nvidia.png" alt="Nvidia"></div>
-        <div class="partner-card"><img src="assets/img/partners/Paloalto.png" alt="Palo Alto Networks"></div>
-        <div class="partner-card"><img src="assets/img/partners/Check-Point.png" alt="Check Point"></div>
-        <div class="partner-card"><img src="assets/img/partners/SentinelOne.png" alt="SentinelOne"></div>
-        <div class="partner-card"><img src="assets/img/partners/SonicWall.png" alt="SonicWall"></div>
+        <div class="partner-card"><img src="assets/img/partners/Google.png" alt="Google Cloud" loading="lazy"></div>
+        <div class="partner-card"><img src="assets/img/partners/aws.jpg" alt="AWS" loading="lazy"></div>
+        <div class="partner-card"><img src="assets/img/partners/Microsoft.png" alt="Microsoft" loading="lazy"></div>
+        <div class="partner-card"><img src="assets/img/partners/Nvidia.png" alt="Nvidia" loading="lazy"></div>
+        <div class="partner-card"><img src="assets/img/partners/Paloalto.png" alt="Palo Alto Networks" loading="lazy"></div>
+        <div class="partner-card"><img src="assets/img/partners/Check-Point.png" alt="Check Point" loading="lazy"></div>
+        <div class="partner-card"><img src="assets/img/partners/SentinelOne.png" alt="SentinelOne" loading="lazy"></div>
+        <div class="partner-card"><img src="assets/img/partners/SonicWall.png" alt="SonicWall" loading="lazy"></div>
+        <!-- duplicate set for a seamless loop -->
+        <div class="partner-card" aria-hidden="true"><img src="assets/img/partners/Google.png" alt="" loading="lazy"></div>
+        <div class="partner-card" aria-hidden="true"><img src="assets/img/partners/aws.jpg" alt="" loading="lazy"></div>
+        <div class="partner-card" aria-hidden="true"><img src="assets/img/partners/Microsoft.png" alt="" loading="lazy"></div>
+        <div class="partner-card" aria-hidden="true"><img src="assets/img/partners/Nvidia.png" alt="" loading="lazy"></div>
+        <div class="partner-card" aria-hidden="true"><img src="assets/img/partners/Paloalto.png" alt="" loading="lazy"></div>
+        <div class="partner-card" aria-hidden="true"><img src="assets/img/partners/Check-Point.png" alt="" loading="lazy"></div>
+        <div class="partner-card" aria-hidden="true"><img src="assets/img/partners/SentinelOne.png" alt="" loading="lazy"></div>
+        <div class="partner-card" aria-hidden="true"><img src="assets/img/partners/SonicWall.png" alt="" loading="lazy"></div>
       </div>
     </div>
-
-    <!-- Row 2: Moves Right -->
-    <div class="marquee-row marquee-row-right" aria-label="Technology partners row 2">
+    <div class="marquee-row marquee-row-right">
       <div class="marquee-track">
-        <div class="partner-card"><img src="assets/img/partners/Kaspersky.png" alt="Kaspersky"></div>
-        <div class="partner-card"><img src="assets/img/partners/Zscaler.png" alt="Zscaler"></div>
-        <div class="partner-card"><img src="assets/img/partners/Veeam.png" alt="Veeam"></div>
-        <div class="partner-card"><img src="assets/img/partners/Sophos.png" alt="Sophos"></div>
-        <div class="partner-card"><img src="assets/img/partners/Lenovo.png" alt="Lenovo"></div>
-        <div class="partner-card"><img src="assets/img/partners/Commvault.png" alt="Commvault"></div>
-        <div class="partner-card"><img src="assets/img/partners/Rapid7.png" alt="Rapid7"></div>
-        <div class="partner-card"><img src="assets/img/partners/Trend-Micro.png" alt="Trend Micro"></div>
-        <!-- Duplicate for seamless infinite loop -->
-        <div class="partner-card"><img src="assets/img/partners/Kaspersky.png" alt="Kaspersky"></div>
-        <div class="partner-card"><img src="assets/img/partners/Zscaler.png" alt="Zscaler"></div>
-        <div class="partner-card"><img src="assets/img/partners/Veeam.png" alt="Veeam"></div>
-        <div class="partner-card"><img src="assets/img/partners/Sophos.png" alt="Sophos"></div>
-        <div class="partner-card"><img src="assets/img/partners/Lenovo.png" alt="Lenovo"></div>
-        <div class="partner-card"><img src="assets/img/partners/Commvault.png" alt="Commvault"></div>
-        <div class="partner-card"><img src="assets/img/partners/Rapid7.png" alt="Rapid7"></div>
-        <div class="partner-card"><img src="assets/img/partners/Trend-Micro.png" alt="Trend Micro"></div>
+        <div class="partner-card"><img src="assets/img/partners/Kaspersky.png" alt="Kaspersky" loading="lazy"></div>
+        <div class="partner-card"><img src="assets/img/partners/Zscaler.png" alt="Zscaler" loading="lazy"></div>
+        <div class="partner-card"><img src="assets/img/partners/Veeam.png" alt="Veeam" loading="lazy"></div>
+        <div class="partner-card"><img src="assets/img/partners/Sophos.png" alt="Sophos" loading="lazy"></div>
+        <div class="partner-card"><img src="assets/img/partners/Lenovo.png" alt="Lenovo" loading="lazy"></div>
+        <div class="partner-card"><img src="assets/img/partners/Commvault.png" alt="Commvault" loading="lazy"></div>
+        <div class="partner-card"><img src="assets/img/partners/Rapid7.png" alt="Rapid7" loading="lazy"></div>
+        <div class="partner-card"><img src="assets/img/partners/Trend-Micro.png" alt="Trend Micro" loading="lazy"></div>
+        <!-- duplicate set for a seamless loop -->
+        <div class="partner-card" aria-hidden="true"><img src="assets/img/partners/Kaspersky.png" alt="" loading="lazy"></div>
+        <div class="partner-card" aria-hidden="true"><img src="assets/img/partners/Zscaler.png" alt="" loading="lazy"></div>
+        <div class="partner-card" aria-hidden="true"><img src="assets/img/partners/Veeam.png" alt="" loading="lazy"></div>
+        <div class="partner-card" aria-hidden="true"><img src="assets/img/partners/Sophos.png" alt="" loading="lazy"></div>
+        <div class="partner-card" aria-hidden="true"><img src="assets/img/partners/Lenovo.png" alt="" loading="lazy"></div>
+        <div class="partner-card" aria-hidden="true"><img src="assets/img/partners/Commvault.png" alt="" loading="lazy"></div>
+        <div class="partner-card" aria-hidden="true"><img src="assets/img/partners/Rapid7.png" alt="" loading="lazy"></div>
+        <div class="partner-card" aria-hidden="true"><img src="assets/img/partners/Trend-Micro.png" alt="" loading="lazy"></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ TAG MARQUEE ============ -->
-<section class="tag-marquee">
-  <div class="marquee">
-    <div class="marquee-track">
-      <span class="tag-marquee-item">Cloud Strategy <span class="sep">✦</span></span>
-      <span class="tag-marquee-item">AI &amp; Automation <span class="sep">✦</span></span>
-      <span class="tag-marquee-item">Cybersecurity <span class="sep">✦</span></span>
-      <span class="tag-marquee-item">DevOps &amp; CI/CD <span class="sep">✦</span></span>
-      <span class="tag-marquee-item">Data Engineering <span class="sep">✦</span></span>
-      <span class="tag-marquee-item">Managed Services <span class="sep">✦</span></span>
-      <span class="tag-marquee-item">ERP Solutions <span class="sep">✦</span></span>
-      <span class="tag-marquee-item">Cloud Strategy <span class="sep">✦</span></span>
-      <span class="tag-marquee-item">AI &amp; Automation <span class="sep">✦</span></span>
-      <span class="tag-marquee-item">Cybersecurity <span class="sep">✦</span></span>
-      <span class="tag-marquee-item">DevOps &amp; CI/CD <span class="sep">✦</span></span>
-      <span class="tag-marquee-item">Data Engineering <span class="sep">✦</span></span>
-      <span class="tag-marquee-item">Managed Services <span class="sep">✦</span></span>
-      <span class="tag-marquee-item">ERP Solutions <span class="sep">✦</span></span>
-    </div>
+<!-- ============ CAPABILITIES STRIP ============ -->
+<section class="caps" aria-label="Capabilities">
+  <div class="caps-track">
+    <ul class="caps-list">
+      <li>Cloud Strategy</li><li>AI &amp; Automation</li><li>Cybersecurity</li><li>DevOps &amp; CI/CD</li><li>Data Engineering</li><li>Managed Services</li><li>ERP Solutions</li>
+    </ul>
+    <ul class="caps-list" aria-hidden="true">
+      <li>Cloud Strategy</li><li>AI &amp; Automation</li><li>Cybersecurity</li><li>DevOps &amp; CI/CD</li><li>Data Engineering</li><li>Managed Services</li><li>ERP Solutions</li>
+    </ul>
   </div>
 </section>
 
 <!-- ============ MANIFESTO ============ -->
-<section class="section-tight manifesto">
+<section class="manifesto" aria-label="Our approach">
   <div class="container">
-    <p class="manifesto-text reveal">
+    <p class="eyebrow">Our approach</p>
+    <p class="manifesto-text" data-words>
       We don't just move you to the cloud — we make technology work
       <span class="hl">harder</span>, <span class="hl">smarter</span> and
       <span class="hl">safer</span> for your business.
@@ -246,373 +279,271 @@
   </div>
 </section>
 
-<!-- ============ SERVICES ============ -->
-<section class="section section-numbered">
-  <span class="ghost-num">01</span>
+<!-- ============ 02 · SERVICES — 3D perspective carousel ============ -->
+<section class="orbit-section on-dark" id="services" aria-labelledby="servicesTitle">
   <div class="container">
-    <div class="section-head reveal">
-      <h2>End-to-end technology services, under one roof</h2>
-      <p>From cloud strategy to AI, security and staffing — we cover the full stack so you can move faster with a single trusted partner.</p>
-    </div>
-  </div>
-
-  <div class="swiper svc-swiper svc-swiper-wide">
-      <div class="swiper-wrapper">
-
-        <div class="swiper-slide"><div class="svc-card">
-          <img src="assets/img/services/cloud-strategy.jpg" alt="Cloud Strategy & Consulting">
-          <div class="svc-card-body">
-            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg></div>
-            <h4>Cloud Strategy &amp; Consulting</h4>
-            <p>Roadmaps and architecture designed around your growth targets.</p>
-          </div>
-        </div></div>
-
-        <div class="swiper-slide"><div class="svc-card">
-          <img src="assets/img/services/migration.jpg" alt="Migration Services">
-          <div class="svc-card-body">
-            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 3l4 4-4 4M21 7H7M7 21l-4-4 4-4M3 17h14"/></svg></div>
-            <h4>Migration Services</h4>
-            <p>Zero-downtime, cost-optimized moves to the cloud.</p>
-          </div>
-        </div></div>
-
-        <div class="swiper-slide"><div class="svc-card">
-          <img src="assets/img/services/managed-services.jpg" alt="Managed Services">
-          <div class="svc-card-body">
-            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3M12 2a10 10 0 100 20 10 10 0 000-20z"/></svg></div>
-            <h4>Managed Services</h4>
-            <p>24/7 monitoring, support and optimization.</p>
-          </div>
-        </div></div>
-
-        <div class="swiper-slide"><div class="svc-card">
-          <img src="assets/img/services/devops.jpg" alt="DevOps & CI/CD">
-          <div class="svc-card-body">
-            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg></div>
-            <h4>DevOps &amp; CI/CD</h4>
-            <p>Automated pipelines that ship reliably, every time.</p>
-          </div>
-        </div></div>
-
-        <div class="swiper-slide"><div class="svc-card">
-          <img src="assets/img/services/app-development.jpg" alt="Custom Application Development">
-          <div class="svc-card-body">
-            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></div>
-            <h4>Custom Application Development</h4>
-            <p>Custom software engineered for scale.</p>
-          </div>
-        </div></div>
-
-        <div class="swiper-slide"><div class="svc-card">
-          <img src="assets/img/services/devops.jpg" alt="Agile Delivery">
-          <div class="svc-card-body">
-            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
-            <h4>Agile Delivery</h4>
-            <p>Sprint-based delivery with predictable releases.</p>
-          </div>
-        </div></div>
-
-        <div class="swiper-slide"><div class="svc-card">
-          <img src="assets/img/services/big-data.jpg" alt="Big Data & Analytics">
-          <div class="svc-card-body">
-            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5M10 19V9M16 19v-7M22 19H2"/></svg></div>
-            <h4>Big Data &amp; Analytics</h4>
-            <p>Turn raw data into decisions with modern pipelines.</p>
-          </div>
-        </div></div>
-
-        <div class="swiper-slide"><div class="svc-card">
-          <img src="assets/img/services/ai-ml.jpg" alt="AI & Machine Learning">
-          <div class="svc-card-body">
-            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg></div>
-            <h4>AI &amp; Machine Learning</h4>
-            <p>Applied AI that automates and predicts.</p>
-          </div>
-        </div></div>
-
-        <div class="swiper-slide"><div class="svc-card">
-          <img src="assets/img/services/iot.jpg" alt="Internet of Things">
-          <div class="svc-card-body">
-            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg></div>
-            <h4>Internet of Things</h4>
-            <p>Connected device pipelines from edge to cloud.</p>
-          </div>
-        </div></div>
-
-        <div class="swiper-slide"><div class="svc-card">
-          <img src="assets/img/services/security.jpg" alt="Managed Security">
-          <div class="svc-card-body">
-            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-            <h4>Managed Security</h4>
-            <p>24/7 threat monitoring and incident response.</p>
-          </div>
-        </div></div>
-
-        <div class="swiper-slide"><div class="svc-card">
-          <img src="assets/img/services/big-data.jpg" alt="Compliance & Risk">
-          <div class="svc-card-body">
-            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/></svg></div>
-            <h4>Compliance &amp; Risk</h4>
-            <p>Audit readiness for evolving regulations.</p>
-          </div>
-        </div></div>
-
-        <div class="swiper-slide"><div class="svc-card">
-          <img src="assets/img/services/security.jpg" alt="Identity & Access Management">
-          <div class="svc-card-body">
-            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
-            <h4>Identity &amp; Access Mgmt</h4>
-            <p>Zero-trust access controls and governance.</p>
-          </div>
-        </div></div>
-
-        <div class="swiper-slide"><div class="svc-card">
-          <img src="assets/img/services/erp.jpg" alt="ERP Implementation">
-          <div class="svc-card-body">
-            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
-            <h4>ERP Implementation</h4>
-            <p>Requirements-to-rollout tailored delivery.</p>
-          </div>
-        </div></div>
-
-        <div class="swiper-slide"><div class="svc-card">
-          <img src="assets/img/services/managed-services.jpg" alt="ERP Support & Optimization">
-          <div class="svc-card-body">
-            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3M12 2a10 10 0 100 20 10 10 0 000-20z"/></svg></div>
-            <h4>ERP Support &amp; Optimization</h4>
-            <p>Ongoing tuning, upgrades and user support.</p>
-          </div>
-        </div></div>
-
-        <div class="swiper-slide"><div class="svc-card">
-          <img src="assets/img/services/staffing.jpg" alt="Staff Augmentation">
-          <div class="svc-card-body">
-            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
-            <h4>Staff Augmentation</h4>
-            <p>Scale your team on demand with vetted specialists.</p>
-          </div>
-        </div></div>
-
-        <div class="swiper-slide"><div class="svc-card">
-          <img src="assets/img/services/devops.jpg" alt="IT Support">
-          <div class="svc-card-body">
-            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3M12 2a10 10 0 100 20 10 10 0 000-20z"/></svg></div>
-            <h4>IT Support</h4>
-            <p>Responsive helpdesk, around the clock.</p>
-          </div>
-        </div></div>
-
+    <div class="sb-head">
+      <div class="reveal">
+        <p class="eyebrow">01 — Services</p>
+        <h2 id="servicesTitle">End-to-end technology services, under one roof</h2>
       </div>
-      <div class="swiper-pagination" id="svcPagination"></div>
+      <div class="reveal">
+        <p>From cloud strategy to AI, security and staffing — we cover the full stack so you can move faster with a single trusted partner.</p>
+      </div>
+    </div>
   </div>
 
+  <div class="orbit" id="orbit" aria-roledescription="carousel" aria-label="Core5 services">
+    <div class="orbit-track" id="orbitTrack">
+      <a class="ocard" href="services.html#cloud"><img src="assets/img/services/cloud-strategy.jpg" alt="" loading="lazy"><span class="ocard-body"><span class="ocard-tag mono">Cloud &amp; Infrastructure</span><span class="ocard-title">Cloud Strategy &amp; Consulting</span><span class="ocard-desc">Roadmaps and architecture designed around your growth targets.</span></span></a>
+      <a class="ocard" href="services.html#cloud"><img src="assets/img/services/migration.jpg" alt="" loading="lazy"><span class="ocard-body"><span class="ocard-tag mono">Cloud &amp; Infrastructure</span><span class="ocard-title">Migration Services</span><span class="ocard-desc">Zero-downtime, cost-optimized moves to the cloud.</span></span></a>
+      <a class="ocard" href="services.html#cloud"><img src="assets/img/services/managed-services.jpg" alt="" loading="lazy"><span class="ocard-body"><span class="ocard-tag mono">Cloud &amp; Infrastructure</span><span class="ocard-title">Managed Services</span><span class="ocard-desc">24/7 monitoring, support and optimization.</span></span></a>
+      <a class="ocard" href="services.html#devops"><img src="assets/img/services/devops.jpg" alt="" loading="lazy"><span class="ocard-body"><span class="ocard-tag mono">Development &amp; DevOps</span><span class="ocard-title">DevOps &amp; CI/CD</span><span class="ocard-desc">Automated pipelines that ship reliably, every time.</span></span></a>
+      <a class="ocard" href="services.html#devops"><img src="assets/img/services/app-development.jpg" alt="" loading="lazy"><span class="ocard-body"><span class="ocard-tag mono">Development &amp; DevOps</span><span class="ocard-title">Custom Application Development</span><span class="ocard-desc">Custom software engineered for scale.</span></span></a>
+      <a class="ocard" href="services.html#devops"><img src="assets/img/services/devops.jpg" alt="" loading="lazy"><span class="ocard-body"><span class="ocard-tag mono">Development &amp; DevOps</span><span class="ocard-title">Agile Delivery</span><span class="ocard-desc">Sprint-based delivery with predictable releases.</span></span></a>
+      <a class="ocard" href="services.html#data"><img src="assets/img/services/big-data.jpg" alt="" loading="lazy"><span class="ocard-body"><span class="ocard-tag mono">Data, Analytics &amp; AI</span><span class="ocard-title">Big Data &amp; Analytics</span><span class="ocard-desc">Turn raw data into decisions with modern pipelines.</span></span></a>
+      <a class="ocard" href="services.html#data"><img src="assets/img/services/ai-ml.jpg" alt="" loading="lazy"><span class="ocard-body"><span class="ocard-tag mono">Data, Analytics &amp; AI</span><span class="ocard-title">AI &amp; Machine Learning</span><span class="ocard-desc">Applied AI that automates and predicts.</span></span></a>
+      <a class="ocard" href="services.html#data"><img src="assets/img/services/iot.jpg" alt="" loading="lazy"><span class="ocard-body"><span class="ocard-tag mono">Data, Analytics &amp; AI</span><span class="ocard-title">Internet of Things</span><span class="ocard-desc">Connected device pipelines from edge to cloud.</span></span></a>
+      <a class="ocard" href="services.html#security"><img src="assets/img/services/security.jpg" alt="" loading="lazy"><span class="ocard-body"><span class="ocard-tag mono">Security &amp; Compliance</span><span class="ocard-title">Managed Security</span><span class="ocard-desc">24/7 threat monitoring and incident response.</span></span></a>
+      <a class="ocard" href="services.html#security"><img src="assets/img/services/big-data.jpg" alt="" loading="lazy"><span class="ocard-body"><span class="ocard-tag mono">Security &amp; Compliance</span><span class="ocard-title">Compliance &amp; Risk</span><span class="ocard-desc">Audit readiness for evolving regulations.</span></span></a>
+      <a class="ocard" href="services.html#security"><img src="assets/img/services/security.jpg" alt="" loading="lazy"><span class="ocard-body"><span class="ocard-tag mono">Security &amp; Compliance</span><span class="ocard-title">Identity &amp; Access Mgmt</span><span class="ocard-desc">Zero-trust access controls and governance.</span></span></a>
+      <a class="ocard" href="services.html#erp"><img src="assets/img/services/erp.jpg" alt="" loading="lazy"><span class="ocard-body"><span class="ocard-tag mono">Enterprise Resource Planning</span><span class="ocard-title">ERP Implementation</span><span class="ocard-desc">Requirements-to-rollout tailored delivery.</span></span></a>
+      <a class="ocard" href="services.html#erp"><img src="assets/img/services/managed-services.jpg" alt="" loading="lazy"><span class="ocard-body"><span class="ocard-tag mono">Enterprise Resource Planning</span><span class="ocard-title">ERP Support &amp; Optimization</span><span class="ocard-desc">Ongoing tuning, upgrades and user support.</span></span></a>
+      <a class="ocard" href="services.html#staffing"><img src="assets/img/services/staffing.jpg" alt="" loading="lazy"><span class="ocard-body"><span class="ocard-tag mono">Staffing &amp; Support</span><span class="ocard-title">Staff Augmentation</span><span class="ocard-desc">Scale your team on demand with vetted specialists.</span></span></a>
+      <a class="ocard" href="services.html#staffing"><img src="assets/img/services/devops.jpg" alt="" loading="lazy"><span class="ocard-body"><span class="ocard-tag mono">Staffing &amp; Support</span><span class="ocard-title">IT Support</span><span class="ocard-desc">Responsive helpdesk, around the clock.</span></span></a>
+    </div>
+  </div>
+
+  <div class="container orbit-ui">
+    <button type="button" class="orbit-btn" id="orbitPrev" aria-label="Previous service"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 5l-7 7 7 7"/></svg></button>
+    <div class="orbit-meter">
+      <span class="mono" id="orbitCount" aria-live="polite">01 / 16</span>
+      <i class="orbit-rail"><b id="orbitFill"></b></i>
+    </div>
+    <button type="button" class="orbit-btn" id="orbitNext" aria-label="Next service"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
+    <a href="services.html" class="btn btn-gold orbit-all">View all services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats" aria-label="Core5 in numbers">
   <div class="container">
-    <div class="text-center" style="margin-top:12px;">
-      <a href="services.html" class="btn btn-dark">View all services
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+    <div class="stats-grid">
+      <div class="stat reveal"><span class="stat-k">Est.</span><div class="num">2022</div><div class="lbl">Year founded</div></div>
+      <div class="stat reveal"><span class="stat-k">Experience</span><div class="num"><span data-count="100">0</span><i>+</i></div><div class="lbl">Years combined team experience</div></div>
+      <div class="stat reveal"><span class="stat-k">Reach</span><div class="num"><span data-count="100">0</span><i>+</i></div><div class="lbl">Customers worldwide</div></div>
+      <div class="stat reveal"><span class="stat-k">Ecosystem</span><div class="num"><span data-count="30">0</span><i>+</i></div><div class="lbl">Technology partners</div></div>
     </div>
   </div>
 </section>
 
-<!-- ============ STATS BAND ============ -->
-<section class="stats-band">
-  <div class="container stats-grid">
-    <div class="reveal"><div class="num"><span data-count="2022">0</span></div><div class="lbl">Year founded</div></div>
-    <div class="reveal"><div class="num"><span data-count="100" data-suffix="+">0</span></div><div class="lbl">Years combined team experience</div></div>
-    <div class="reveal"><div class="num"><span data-count="100" data-suffix="+">0</span></div><div class="lbl">Customers worldwide</div></div>
-    <div class="reveal"><div class="num"><span data-count="30" data-suffix="+">0</span></div><div class="lbl">Technology partners</div></div>
+<!-- ============ 03 · CLOUD TOPOLOGY EXPLORER (scroll-driven) ============ -->
+<section class="topo on-dark" id="topology" aria-labelledby="topoTitle">
+  <div class="topo-stage">
+    <canvas class="topo-canvas" id="topoCanvas" aria-hidden="true"></canvas>
+    <div class="container topo-inner">
+      <div class="topo-copy">
+        <p class="eyebrow">02 — Cloud topology</p>
+        <h2 id="topoTitle">One partner across every layer of your stack</h2>
+        <ol class="topo-index mono" id="topoIndex">
+          <li><button type="button" data-i="0">L1</button></li>
+          <li><button type="button" data-i="1">L2</button></li>
+          <li><button type="button" data-i="2">L3</button></li>
+          <li><button type="button" data-i="3">L4</button></li>
+          <li><button type="button" data-i="4">L5</button></li>
+        </ol>
+        <div class="topo-chapters" id="topoChapters">
+          <article class="topo-ch is-active">
+            <h3><span class="mono">L1</span>Cloud infrastructure</h3>
+            <p>Architecture and operations built on Google Cloud, AWS and Microsoft Azure — designed for growth, security and performance.</p>
+            <ul><li>Cloud Strategy &amp; Consulting</li><li>Migration Services</li><li>Managed Services</li></ul>
+          </article>
+          <article class="topo-ch">
+            <h3><span class="mono">L2</span>Security &amp; governance</h3>
+            <p>Partnering with Kaspersky, Zscaler, Sophos, Palo Alto Networks and more to keep you secure and compliant.</p>
+            <ul><li>Managed Security</li><li>Compliance &amp; Risk</li><li>Identity &amp; Access Management</li></ul>
+          </article>
+          <article class="topo-ch">
+            <h3><span class="mono">L3</span>Data architecture</h3>
+            <p>Modern data pipelines, warehousing and BI dashboards — with connected device pipelines from edge ingestion to cloud analytics.</p>
+            <ul><li>Big Data &amp; Analytics</li><li>Internet of Things</li></ul>
+          </article>
+          <article class="topo-ch">
+            <h3><span class="mono">L4</span>AI &amp; machine learning</h3>
+            <p>Applied ML models and intelligent automation tailored to your workflows.</p>
+            <ul><li>AI &amp; Machine Learning</li><li>Intelligent automation</li></ul>
+          </article>
+          <article class="topo-ch">
+            <h3><span class="mono">L5</span>Enterprise applications</h3>
+            <p>Engineering practices and pipelines that help you ship faster, with fewer incidents — supported end to end by our staffing and IT support teams.</p>
+            <ul><li>Custom Application Development</li><li>DevOps &amp; CI/CD</li><li>ERP</li><li>Staffing &amp; IT Support</li></ul>
+          </article>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ============ WHY CHOOSE US ============ -->
-<section class="section section-numbered">
-  <span class="ghost-num">02</span>
-  <div class="container split">
-    <div class="split-visual reveal">
-      <img src="assets/img/services/cloud-strategy.jpg" alt="Core5 team at work">
-      <div class="split-badge">
+<!-- ============ WHY CORE5 ============ -->
+<section class="why" aria-labelledby="whyTitle">
+  <div class="container why-grid">
+    <div class="why-visual reveal">
+      <figure class="why-img why-img-main"><img src="assets/img/services/cloud-strategy.jpg" alt="Cloud strategy and consulting" loading="lazy"></figure>
+      <figure class="why-img why-img-sub"><img src="assets/img/services/devops.jpg" alt="DevOps engineering" loading="lazy"></figure>
+      <div class="why-badge">
         <div class="num">100+</div>
         <span>Customers<br>worldwide</span>
       </div>
     </div>
-    <div class="reveal">
-      <h2 style="font-size:clamp(26px,3vw,36px);margin-bottom:28px;">A partner invested in your outcomes, not just your project</h2>
-
-      <div class="feature-row">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg></div>
-        <div><h4>Deep bench, real experience</h4><p>Founded in 2022, our team brings over 100 years of combined industry experience across cloud, security and engineering.</p></div>
+    <div class="why-copy">
+      <div class="reveal">
+        <p class="eyebrow">03 — Why Core5</p>
+        <h2 id="whyTitle">A partner invested in your outcomes, not just your project</h2>
       </div>
-      <div class="feature-row">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
-        <div><h4>Top-quality IT solutions</h4><p>Enterprise-grade delivery across cloud, data, security and applications — tailored to your industry.</p></div>
-      </div>
-      <div class="feature-row">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
-        <div><h4>Dedicated sales &amp; support</h4><p>A relationship-first team that stays engaged long after go-live.</p></div>
-      </div>
-      <div class="feature-row">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg></div>
-        <div><h4>Global reach, local touch</h4><p>Serving 100+ customers worldwide as a Google Cloud Advanced Consulting Partner.</p></div>
-      </div>
+      <ol class="why-list">
+        <li class="reveal"><span class="mono">01</span><div><h3>Deep bench, real experience</h3><p>Founded in 2022, our team brings over 100 years of combined industry experience across cloud, security and engineering.</p></div></li>
+        <li class="reveal"><span class="mono">02</span><div><h3>Top-quality IT solutions</h3><p>Enterprise-grade delivery across cloud, data, security and applications — tailored to your industry.</p></div></li>
+        <li class="reveal"><span class="mono">03</span><div><h3>Dedicated sales &amp; support</h3><p>A relationship-first team that stays engaged long after go-live.</p></div></li>
+        <li class="reveal"><span class="mono">04</span><div><h3>Global reach, local touch</h3><p>Serving 100+ customers worldwide as a Google Cloud Advanced Consulting Partner.</p></div></li>
+      </ol>
     </div>
   </div>
 </section>
 
-<!-- ============ SELECTED WORK ============ -->
-<section class="section bg-mist section-numbered">
-  <span class="ghost-num">03</span>
+<!-- ============ 04 · CASE STUDIES — stories of transformation ============ -->
+<section class="stories on-dark" aria-labelledby="storiesTitle">
   <div class="container">
-    <div class="section-head reveal">
-      <h2>Real results for real businesses</h2>
-      <p>A look at how we've helped clients across logistics, fintech, manufacturing and edtech modernize their technology. Hover a row to preview.</p>
+    <div class="stories-head reveal">
+      <p class="eyebrow">04 — Selected work</p>
+      <h2 id="storiesTitle">Real results for <em>real businesses</em></h2>
+      <p>A look at how we've helped clients across logistics, fintech, manufacturing and edtech modernize their technology.</p>
     </div>
-    <div class="work-list" id="workList">
-      <a href="case-studies.html" class="work-row" data-img="assets/img/services/cloud-strategy.jpg">
-        <span class="work-index">01</span>
-        <span class="work-name">Logistos</span>
-        <span class="work-cat">Logistics · Cloud Migration</span>
-        <span class="work-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+    <div class="stories-grid">
+      <a href="case-studies.html" class="story s-a reveal">
+        <span class="story-img" style="background-image:url('assets/img/services/cloud-strategy.jpg')"></span>
+        <span class="story-top"><span class="mono">01 · Logistics · Cloud Migration</span><span class="story-arrow">&nearr;</span></span>
+        <span class="story-name">Logistos</span>
+        <span class="story-title">Scaling infrastructure for peak demand</span>
+        <span class="story-metric"><b>40%</b><small>Faster response time</small></span>
       </a>
-      <a href="case-studies.html" class="work-row" data-img="assets/img/services/security.jpg">
-        <span class="work-index">02</span>
-        <span class="work-name">BeNow</span>
-        <span class="work-cat">Fintech · Security Architecture</span>
-        <span class="work-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+      <a href="case-studies.html" class="story s-b reveal">
+        <span class="story-img" style="background-image:url('assets/img/services/security.jpg')"></span>
+        <span class="story-top"><span class="mono">02 · Fintech · Security Architecture</span><span class="story-arrow">&nearr;</span></span>
+        <span class="story-name">BeNow</span>
+        <span class="story-title">Security-first cloud architecture</span>
+        <span class="story-metric"><b>3 wks</b><small>Ahead of deadline</small></span>
       </a>
-      <a href="case-studies.html" class="work-row" data-img="assets/img/services/devops.jpg">
-        <span class="work-index">03</span>
-        <span class="work-name">Control Print</span>
-        <span class="work-cat">Manufacturing · Modernization</span>
-        <span class="work-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+      <a href="case-studies.html" class="story s-c reveal">
+        <span class="story-img" style="background-image:url('assets/img/services/devops.jpg')"></span>
+        <span class="story-top"><span class="mono">03 · Manufacturing · Modernization</span><span class="story-arrow">&nearr;</span></span>
+        <span class="story-name">Control Print</span>
+        <span class="story-title">Modernizing legacy systems</span>
+        <span class="story-metric"><b>99.9%</b><small>Uptime achieved</small></span>
       </a>
-      <a href="case-studies.html" class="work-row" data-img="assets/img/services/big-data.jpg">
-        <span class="work-index">04</span>
-        <span class="work-name">Flinnt</span>
-        <span class="work-cat">EdTech · Scalable Infrastructure</span>
-        <span class="work-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+      <a href="case-studies.html" class="story s-d reveal">
+        <span class="story-img" style="background-image:url('assets/img/services/big-data.jpg')"></span>
+        <span class="story-top"><span class="mono">04 · EdTech · Scalable Infrastructure</span><span class="story-arrow">&nearr;</span></span>
+        <span class="story-name">Flinnt</span>
+        <span class="story-title">Building for scale from day one</span>
+        <span class="story-metric"><b>10x</b><small>User growth supported</small></span>
       </a>
     </div>
-    <div class="text-center" style="margin-top:36px;">
-      <a href="case-studies.html" class="btn btn-dark">View all case studies
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+    <div class="stories-foot reveal">
+      <a href="case-studies.html" class="btn btn-outline">View all case studies <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
     </div>
   </div>
-  <div class="work-preview" id="workPreview"><img src="assets/img/services/cloud-strategy.jpg" alt=""></div>
 </section>
 
 <!-- ============ TESTIMONIALS ============ -->
-<section class="section bg-mist section-numbered" style="padding-top:0;">
-  <span class="ghost-num">04</span>
-  <div class="container">
-    <div class="section-head center reveal" style="margin-left:auto;margin-right:auto;">
-      <h2>What our clients say</h2>
+<section class="testi" aria-labelledby="testiTitle">
+  <div class="container testi-grid">
+    <div class="testi-side reveal">
+      <p class="eyebrow">05 — Client voices</p>
+      <h2 id="testiTitle">What our clients say</h2>
       <p>We measure success by the relationships we keep and the outcomes we deliver.</p>
+      <div class="testi-tabs" role="tablist" aria-label="Choose a client testimonial">
+        <button type="button" role="tab" class="testi-tab is-active" id="tTab0" aria-selected="true" aria-controls="tPanel0"><img src="assets/img/clients/logistos.jpg" alt="Logistos" loading="lazy"></button>
+        <button type="button" role="tab" class="testi-tab" id="tTab1" aria-selected="false" aria-controls="tPanel1" tabindex="-1"><img src="assets/img/clients/benow.jpg" alt="BeNow" loading="lazy"></button>
+        <button type="button" role="tab" class="testi-tab" id="tTab2" aria-selected="false" aria-controls="tPanel2" tabindex="-1"><img src="assets/img/clients/control-print.jpg" alt="Control Print" loading="lazy"></button>
+      </div>
     </div>
-    <div class="testi-track">
-      <div class="testi-card reveal spotlight">
-        <div class="testi-stars">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-        </div>
-        <p class="quote">"Core5's team was incredibly responsive and technically sharp — our migration went smoother than we expected, with zero disruption to our operations."</p>
-        <div class="testi-person">
-          <div class="testi-avatar">L</div>
-          <div><strong>Logistos</strong><span>logistos.in</span></div>
-        </div>
-      </div>
-      <div class="testi-card reveal spotlight">
-        <div class="testi-stars">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-        </div>
-        <p class="quote">"They understood our compliance requirements from day one and delivered a secure, well-documented solution ahead of schedule."</p>
-        <div class="testi-person">
-          <div class="testi-avatar">B</div>
-          <div><strong>BeNow</strong><span>benow.in</span></div>
-        </div>
-      </div>
-      <div class="testi-card reveal spotlight">
-        <div class="testi-stars">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-        </div>
-        <p class="quote">"Reliable, proactive, and easy to work with. Core5 feels like an extension of our own engineering team."</p>
-        <div class="testi-person">
-          <div class="testi-avatar">C</div>
-          <div><strong>Control Print</strong><span>controlprint.com</span></div>
-        </div>
-      </div>
+    <div class="testi-stage reveal">
+      <svg class="testi-mark" viewBox="0 0 48 36" aria-hidden="true"><path d="M0 36V22C0 9 7 2 20 0l2 5C14 7 11 12 11 18h9v18H0zm26 0V22C26 9 33 2 46 0l2 5c-8 2-11 7-11 13h9v18H26z" fill="currentColor"/></svg>
+      <figure class="testi-quote is-active" id="tPanel0" role="tabpanel" aria-labelledby="tTab0">
+        <div class="testi-stars" aria-label="5 out of 5 stars"><i></i><i></i><i></i><i></i><i></i></div>
+        <blockquote>"Core5's team was incredibly responsive and technically sharp — our migration went smoother than we expected, with zero disruption to our operations."</blockquote>
+        <figcaption><strong>Logistos</strong><span class="mono">logistos.in</span></figcaption>
+      </figure>
+      <figure class="testi-quote" id="tPanel1" role="tabpanel" aria-labelledby="tTab1">
+        <div class="testi-stars" aria-label="5 out of 5 stars"><i></i><i></i><i></i><i></i><i></i></div>
+        <blockquote>"They understood our compliance requirements from day one and delivered a secure, well-documented solution ahead of schedule."</blockquote>
+        <figcaption><strong>BeNow</strong><span class="mono">benow.in</span></figcaption>
+      </figure>
+      <figure class="testi-quote" id="tPanel2" role="tabpanel" aria-labelledby="tTab2">
+        <div class="testi-stars" aria-label="5 out of 5 stars"><i></i><i></i><i></i><i></i><i></i></div>
+        <blockquote>"Reliable, proactive, and easy to work with. Core5 feels like an extension of our own engineering team."</blockquote>
+        <figcaption><strong>Control Print</strong><span class="mono">controlprint.com</span></figcaption>
+      </figure>
+      <div class="testi-count mono" aria-hidden="true"><span id="testiNum">01</span> / 03</div>
     </div>
   </div>
 </section>
 
-<!-- ============ CLIENTELE ============ -->
-<section class="logo-strip" style="border-bottom:none;">
+<!-- ============ CLIENTS ============ -->
+<section class="clients" aria-labelledby="clientsTitle">
   <div class="container">
-    <p>Trusted by growing businesses</p>
-    <div class="marquee">
-      <div class="marquee-track">
-        <img src="assets/img/clients/control-print.jpg" alt="Control Print">
-        <img src="assets/img/clients/benow.jpg" alt="BeNow">
-        <img src="assets/img/clients/logistos.jpg" alt="Logistos">
-        <img src="assets/img/clients/flinnt.jpg" alt="Flinnt">
-        <img src="assets/img/clients/infyni.jpg" alt="Infyni">
-        <img src="assets/img/clients/maxmatech.jpg" alt="Maxmatech">
-        <img src="assets/img/clients/aliter.jpg" alt="Aliter">
-        <img src="assets/img/clients/arihant-capital.jpg" alt="Arihant Capital">
-        <img src="assets/img/clients/newgen.jpg" alt="Newgen">
-        <img src="assets/img/clients/unitech-solutions.jpg" alt="Unitech Solutions">
-        <!-- duplicate for loop -->
-        <img src="assets/img/clients/control-print.jpg" alt="Control Print">
-        <img src="assets/img/clients/benow.jpg" alt="BeNow">
-        <img src="assets/img/clients/logistos.jpg" alt="Logistos">
-        <img src="assets/img/clients/flinnt.jpg" alt="Flinnt">
-        <img src="assets/img/clients/infyni.jpg" alt="Infyni">
-        <img src="assets/img/clients/maxmatech.jpg" alt="Maxmatech">
-        <img src="assets/img/clients/aliter.jpg" alt="Aliter">
-        <img src="assets/img/clients/arihant-capital.jpg" alt="Arihant Capital">
-        <img src="assets/img/clients/newgen.jpg" alt="Newgen">
-        <img src="assets/img/clients/unitech-solutions.jpg" alt="Unitech Solutions">
-      </div>
-    </div>
+    <p class="eyebrow" id="clientsTitle">Trusted by growing businesses</p>
+    <ul class="client-wall">
+      <li class="reveal"><img src="assets/img/clients/control-print.jpg" alt="Control Print" loading="lazy"></li>
+      <li class="reveal"><img src="assets/img/clients/benow.jpg" alt="BeNow" loading="lazy"></li>
+      <li class="reveal"><img src="assets/img/clients/logistos.jpg" alt="Logistos" loading="lazy"></li>
+      <li class="reveal"><img src="assets/img/clients/flinnt.jpg" alt="Flinnt" loading="lazy"></li>
+      <li class="reveal"><img src="assets/img/clients/infyni.jpg" alt="Infyni" loading="lazy"></li>
+      <li class="reveal"><img src="assets/img/clients/maxmatech.jpg" alt="Maxmatech" loading="lazy"></li>
+      <li class="reveal"><img src="assets/img/clients/aliter.jpg" alt="Aliter" loading="lazy"></li>
+      <li class="reveal"><img src="assets/img/clients/arihant-capital.jpg" alt="Arihant Capital" loading="lazy"></li>
+      <li class="reveal"><img src="assets/img/clients/newgen.jpg" alt="Newgen" loading="lazy"></li>
+      <li class="reveal"><img src="assets/img/clients/unitech-solutions.jpg" alt="Unitech Solutions" loading="lazy"></li>
+    </ul>
   </div>
 </section>
 
-<!-- ============ CTA BANNER ============ -->
-<section class="section">
-  <div class="container">
-    <div class="cta-banner with-img reveal">
-      <div class="cta-banner-img"><img src="assets/img/services/ai-ml.jpg" alt=""></div>
-      <div>
-        <h2>Ready to accelerate your cloud transformation?</h2>
-        <p>Talk to our team and get a tailored roadmap for your business — no obligation.</p>
-      </div>
+<!-- ============ CLOSING — editorial ============ -->
+<section class="finale on-dark" aria-labelledby="finaleTitle">
+  <div class="finale-horizon" aria-hidden="true"></div>
+  <canvas class="finale-canvas" id="finaleCanvas" aria-hidden="true"></canvas>
+  <div class="container finale-inner">
+    <p class="eyebrow">Start a conversation</p>
+    <h2 id="finaleTitle" class="finale-title">Ready to accelerate your <em>cloud transformation?</em></h2>
+    <div class="finale-row">
+      <p>Talk to our team and get a tailored roadmap for your business — no obligation.</p>
       <div class="cta-actions">
-        <a href="contact.html" class="btn btn-primary btn-magnetic">Contact us</a>
+        <a href="contact.html" class="btn btn-gold btn-magnetic">Contact us <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
         <a href="services.html" class="btn btn-outline">See our services</a>
       </div>
     </div>
+    <ul class="finale-links mono">
+      <li><a href="services.html#cloud">Cloud</a></li>
+      <li><a href="services.html#devops">DevOps</a></li>
+      <li><a href="services.html#data">Data &amp; AI</a></li>
+      <li><a href="services.html#security">Security</a></li>
+      <li><a href="services.html#erp">ERP</a></li>
+      <li><a href="services.html#staffing">Staffing</a></li>
+    </ul>
   </div>
 </section>
 
-<!-- ============ FOOTER ============ -->
+</main>
+
 <footer class="site-footer">
   <div class="container">
+    <div class="footer-statement">
+      <p>Reliable<i>.</i> Innovative<i>.</i><br>Future ready<i>.</i></p>
+      <a href="contact.html" class="btn btn-gold">Get a quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+    </div>
     <div class="footer-top">
       <div class="footer-brand">
-        <img src="assets/img/logo.png" alt="Core5 Systems & Services">
+        <img src="assets/img/logo.png" alt="Core5 Systems &amp; Services" width="1600" height="575" loading="lazy">
         <p>We believe in a symbiotic relationship between humans and the future of tech. We leverage technology to its full potential to hyper-automate our own processes.</p>
         <div class="footer-social">
           <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
@@ -647,8 +578,8 @@
       <div class="footer-col">
         <h5>Contact</h5>
         <ul class="footer-contact">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><span>99304 19595</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg><span>info@core5.co.in<br>sales@core5.co.in</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><a href="tel:+919930419595">99304 19595</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg><span><a href="mailto:info@core5.co.in">info@core5.co.in</a><br><a href="mailto:sales@core5.co.in">sales@core5.co.in</a></span></li>
         </ul>
       </div>
     </div>
@@ -666,9 +597,8 @@
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
 </button>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/home.js"></script>
 <script>document.querySelector('.back-top').addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });</script>
 </body>
 </html>
